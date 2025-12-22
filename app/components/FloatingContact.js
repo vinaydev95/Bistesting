@@ -17,7 +17,7 @@ export default function FloatingContact() {
   };
 
   // Contact information - update these with your actual details
-  const whatsappNumber = '919999999999'; // Replace with your WhatsApp number (with country code, no + or spaces)
+  const whatsappNumber = '9711551135'; // Replace with your WhatsApp number (with country code, no + or spaces)
   const messengerUsername = 'yourusername'; // Replace with your Facebook Messenger username
   const emailAddress = 'jsrcompliance@gmail.com'; // Your email
 
@@ -53,13 +53,14 @@ export default function FloatingContact() {
           </button>
 
           {/* Email Button */}
-          <a 
-            href={`mailto:${emailAddress}`}
+          {/* Email Button - Opens Contact Modal */}
+          <button 
             className="floating-btn email-btn"
+            onClick={openModal}
             aria-label="Send Email"
           >
             <Image src="/icons/email-icon.svg" alt="Email" width={24} height={24} />
-          </a>
+          </button>
 
           {/* WhatsApp Button */}
           <a 
