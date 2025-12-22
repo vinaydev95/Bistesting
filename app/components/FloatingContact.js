@@ -3,10 +3,14 @@
 import { useState } from 'react';
 import ContactModal from './ContactModal';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 export default function FloatingContact() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(true); // Open by default
+  const pathname = usePathname();
+
+  if (pathname === '/contact') return null;
 
   const openModal = () => {
     setIsModalOpen(true);

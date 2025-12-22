@@ -15,12 +15,15 @@ export const metadata = {
   },
 };
 
+import FloatingContact from './components/FloatingContact';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="font-sans">
         <Header />
         <main>{children}</main>
+        <FloatingContact />
         <Footer />
       </body>
     </html>
