@@ -29,19 +29,19 @@ body {
   .btn-primary {
     @apply bg-yellow-500 text-blue-900 px-6 py-3 rounded-lg hover:bg-yellow-400 transition-colors font-semibold;
   }
-  
+
   .btn-secondary {
-    @apply border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold;
+    @apply border-2 border-white text-blue-500 px-6 py-3 rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold;
   }
-  
+
   .card {
     @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100;
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl font-bold text-gray-900 text-center mb-4;
   }
-  
+
   .section-subtitle {
     @apply text-lg text-gray-600 text-center max-w-2xl mx-auto mb-12;
   }
@@ -68,7 +68,7 @@ body {
   opacity: 1 !important;
 }
 
-.swiper-button-next, 
+.swiper-button-next,
 .swiper-button-prev {
   color: white !important;
   background: rgba(255, 255, 255, 0.2);
@@ -78,21 +78,177 @@ body {
   height: 40px !important;
 }
 
-.swiper-button-next:after, 
+.swiper-button-next:after,
 .swiper-button-prev:after {
   font-size: 18px !important;
   font-weight: bold;
 }
 
-.swiper-button-next:hover, 
+.swiper-button-next:hover,
 .swiper-button-prev:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .swiper-button-next, 
+
+  .swiper-button-next,
   .swiper-button-prev {
     display: none !important;
+  }
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Floating Contact Sidebar */
+.floating-contact-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.floating-toggle-btn {
+  background: linear-gradient(135deg, #3b82f6, #1e40af);
+  color: white;
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px 0 0 8px;
+  transition: all 0.3s ease;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  width: 60px;
+  min-height: 56px;
+}
+
+.floating-toggle-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+}
+
+.floating-contact-options {
+  display: flex;
+  flex-direction: column;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* When sidebar is expanded (open), options are visible */
+.floating-contact-sidebar.expanded .floating-contact-options {
+  max-height: 500px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* When sidebar is collapsed, options are hidden */
+.floating-contact-sidebar:not(.expanded) .floating-contact-options {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.floating-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+  min-width: 60px;
+}
+
+.floating-btn:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* Contact Us Button - Purple with vertical text */
+.contact-us-btn {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  flex-direction: column;
+  padding: 20px 16px;
+  gap: 8px;
+}
+
+.contact-us-btn .btn-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Email Button - Blue/Purple */
+.email-btn {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+/* WhatsApp Button - Green */
+.whatsapp-btn {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+/* Messenger Button - Blue */
+.messenger-btn {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .floating-contact-sidebar {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    transform: none;
+    flex-direction: column-reverse;
+  }
+
+  .floating-toggle-btn {
+    border-radius: 50%;
+    padding: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .floating-contact-options {
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+    border-radius: 12px;
+  }
+
+  .floating-contact-sidebar:not(.expanded) .floating-contact-options {
+    transform: translateY(20px);
+  }
+
+  .floating-contact-sidebar.expanded .floating-contact-options {
+    transform: translateY(0);
+  }
+
+  .floating-btn {
+    border-radius: 50%;
+    padding: 14px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .contact-us-btn {
+    padding: 14px;
+  }
+
+  .contact-us-btn .btn-text {
+    display: none;
   }
 }

@@ -1,195 +1,104 @@
-import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request) {
   try {
-    const { name, email, phone, company, service, message } = await request.json();
+    const body = await request.json();
+    const { name, email, phone, company, service, message } = body;
 
     // Validate required fields
     if (!name || !email || !phone || !message) {
-      return NextResponse.json(
-        { error: 'Name, email, phone, and message are required fields' },
+      return Response.json(
+        { error: 'Please fill in all required fields' },
         { status: 400 }
       );
     }
 
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: 'Please provide a valid email address' },
-        { status: 400 }
+    // Check if email credentials are configured
+    const emailUser = process.env.EMAIL_USER;
+    const emailPass = process.env.EMAIL_PASS;
+    const emailReceiver = process.env.EMAIL_RECEIVER || emailUser;
+
+    console.log('Email config check:', { 
+      hasUser: !!emailUser, 
+      hasPass: !!emailPass, 
+      hasReceiver: !!emailReceiver 
+    });
+
+    if (!emailUser || !emailPass) {
+      console.error('Missing email configuration');
+      return Response.json(
+        { error: 'Email service not configured. Please contact support.' },
+        { status: 500 }
       );
     }
 
-    // Create transporter
-    const transporter = nodemailer.createTransporter({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
-      port: process.env.SMTP_PORT || 587,
-      secure: false,
+    // Create transporter - Configure with your email service
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: emailUser,
+        pass: emailPass,
       },
     });
 
-    // Email content for business
-    const businessMailOptions = {
-      from: process.env.SMTP_USER,
-      to: process.env.CONTACT_EMAIL || process.env.SMTP_USER,
-      subject: `New Contact Form Submission - ${service || 'General Inquiry'}`,
+    // Email content
+    const mailOptions = {
+      from: emailUser,
+      to: emailReceiver,
+      replyTo: email,
+      subject: `New Contact Form Submission from ${name}`,
       html: `
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <style>
-              body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-              .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: #1e40af; color: white; padding: 20px; text-align: center; }
-              .content { background: #f9f9f9; padding: 20px; border: 1px solid #ddd; }
-              .field { margin-bottom: 15px; }
-              .label { font-weight: bold; color: #1e40af; }
-              .value { margin-top: 5px; }
-            </style>
-          </head>
-          <body>
-            <div class="container">
-              <div class="header">
-                <h1>New Contact Form Submission</h1>
-                <p>Createk QMS Website</p>
-              </div>
-              <div class="content">
-                <div class="field">
-                  <div class="label">Name:</div>
-                  <div class="value">${name}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Email:</div>
-                  <div class="value">${email}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Phone:</div>
-                  <div class="value">${phone}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Company:</div>
-                  <div class="value">${company || 'Not provided'}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Service Interested In:</div>
-                  <div class="value">${service || 'Not specified'}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Message:</div>
-                  <div class="value">${message}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Submission Time:</div>
-                  <div class="value">${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</div>
-                </div>
-              </div>
-            </div>
-          </body>
-        </html>
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px;">
+          <h2 style="color: #1e40af; border-bottom: 2px solid #1e40af; padding-bottom: 10px;">New Contact Form Submission</h2>
+          
+          <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+            <tr>
+              <td style="padding: 10px; background-color: #f3f4f6; font-weight: bold; width: 30%;">Name:</td>
+              <td style="padding: 10px; background-color: #f9fafb;">${name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; background-color: #f3f4f6; font-weight: bold;">Email:</td>
+              <td style="padding: 10px; background-color: #f9fafb;"><a href="mailto:${email}">${email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; background-color: #f3f4f6; font-weight: bold;">Phone:</td>
+              <td style="padding: 10px; background-color: #f9fafb;"><a href="tel:${phone}">${phone}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; background-color: #f3f4f6; font-weight: bold;">Company:</td>
+              <td style="padding: 10px; background-color: #f9fafb;">${company || 'Not provided'}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; background-color: #f3f4f6; font-weight: bold;">Service Interested:</td>
+              <td style="padding: 10px; background-color: #f9fafb;">${service || 'Not specified'}</td>
+            </tr>
+          </table>
+          
+          <div style="margin-top: 20px; padding: 15px; background-color: #f0f9ff; border-left: 4px solid #1e40af; border-radius: 4px;">
+            <h3 style="margin: 0 0 10px 0; color: #1e40af;">Message:</h3>
+            <p style="margin: 0; white-space: pre-wrap;">${message}</p>
+          </div>
+          
+          <p style="margin-top: 20px; color: #6b7280; font-size: 12px;">
+            This email was sent from the contact form on your website.<br>
+            Submitted on: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
+          </p>
+        </div>
       `,
     };
 
-    // Email content for customer (auto-reply)
-    const customerMailOptions = {
-      from: process.env.SMTP_USER,
-      to: email,
-      subject: 'Thank you for contacting Createk QMS',
-      html: `
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <style>
-              body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-              .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: #1e40af; color: white; padding: 20px; text-align: center; }
-              .content { background: #f9f9f9; padding: 20px; border: 1px solid #ddd; }
-              .footer { margin-top: 20px; padding: 20px; background: #f0f0f0; text-align: center; }
-            </style>
-          </head>
-          <body>
-            <div class="container">
-              <div class="header">
-                <h1>Thank You for Contacting Createk QMS</h1>
-              </div>
-              <div class="content">
-                <p>Dear <strong>${name}</strong>,</p>
-                
-                <p>Thank you for reaching out to Createk QMS. We have received your inquiry and our team will get back to you within 24 hours.</p>
-                
-                <p><strong>Here's a summary of your inquiry:</strong></p>
-                <ul>
-                  <li><strong>Service:</strong> ${service || 'General Inquiry'}</li>
-                  <li><strong>Phone:</strong> ${phone}</li>
-                  ${company ? `<li><strong>Company:</strong> ${company}</li>` : ''}
-                </ul>
-                
-                <p><strong>What happens next?</strong></p>
-                <ol>
-                  <li>Our certification expert will review your requirements</li>
-                  <li>We'll contact you to discuss the process and timeline</li>
-                  <li>We'll provide you with a detailed quote and documentation checklist</li>
-                </ol>
-                
-                <p>If you have any urgent questions, feel free to call us at <strong>+91-9876543210</strong>.</p>
-                
-                <p>Best regards,<br>
-                <strong>Createk QMS Team</strong></p>
-              </div>
-              <div class="footer">
-                <p>Createk QMS | Certification & Registration Services<br>
-                Phone: +91-9876543210 | Email: info@createkqms.com<br>
-                Connaught Place, New Delhi - 110001</p>
-              </div>
-            </div>
-          </body>
-        </html>
-      `,
-    };
+    // Send the email
+    await transporter.sendMail(mailOptions);
 
-    // Send emails
-    await transporter.sendMail(businessMailOptions);
-    await transporter.sendMail(customerMailOptions);
-
-    // Log the submission (you can save to database here if needed)
-    console.log('Contact form submission:', {
-      name,
-      email,
-      phone,
-      company,
-      service,
-      message,
-      timestamp: new Date().toISOString(),
-    });
-
-    return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Contact form submitted successfully. We will get back to you soon!' 
-      },
+    return Response.json(
+      { message: 'Thank you for contacting us! We will get back to you soon.' },
       { status: 200 }
     );
-
   } catch (error) {
-    console.error('Contact form error:', error);
-    
-    return NextResponse.json(
-      { 
-        error: 'Failed to submit contact form. Please try again or contact us directly.' 
-      },
+    console.error('Email sending error:', error);
+    return Response.json(
+      { error: 'Failed to send message. Please try again or contact us directly.' },
       { status: 500 }
     );
   }
-}
-
-// Optional: Add GET method to test the API
-export async function GET() {
-  return NextResponse.json(
-    { message: 'Contact API is working' },
-    { status: 200 }
-  );
 }

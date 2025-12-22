@@ -94,8 +94,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">+91-9876543210</p>
-                    <p className="text-gray-600">+91-9876543211</p>
+                    <p className="text-gray-600">+91-9711551135</p>
                   </div>
                 </div>
 
@@ -105,8 +104,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">info@createkqms.com</p>
-                    <p className="text-gray-600">support@createkqms.com</p>
+                    <p className="text-gray-600">jsrcompliance@gmail.com</p>
                   </div>
                 </div>
 
@@ -117,9 +115,9 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>
                     <p className="text-gray-600">
-                      Createk QMS Office<br />
-                      123 Business Plaza, Connaught Place<br />
-                      New Delhi, Delhi 110001
+                      K-11, Kh. No.-74/20, Ground Floor<br />
+                      Sharma Colony Phase-2, Budh Vihar<br />
+                      Sultanpuri, New Delhi - 110086
                     </p>
                   </div>
                 </div>
@@ -276,7 +274,7 @@ export default function Contact() {
             <div className="text-center text-gray-600">
               <MapPin size={48} className="mx-auto mb-4" />
               <p className="text-lg">Map Integration Here</p>
-              <p className="text-sm">123 Business Plaza, Connaught Place, New Delhi</p>
+              <p className="text-sm">K-11, Sharma Colony Phase-2, Sultanpuri, New Delhi - 110086</p>
             </div>
           </div>
         </div>

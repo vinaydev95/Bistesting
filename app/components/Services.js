@@ -47,8 +47,8 @@ export default function Services() {
   return (
     <section id="services" className="py-20 bg-white">
       <div className="container">
-        <h2 className="section-title">Our Certification Services</h2>
-        <p className="section-subtitle">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">Our Certification Services</h2>
+        <p className="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-12">
           Comprehensive certification and compliance services for Indian and international standards
         </p>
 
@@ -58,18 +58,18 @@ export default function Services() {
               key={index}
               className="card hover:border-blue-200 group hover:transform hover:-translate-y-2 transition-all duration-300"
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
+              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+              <p className="text-lg text-gray-600 mb-4">{service.description}</p>
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-sm text-gray-600">
+                  <li key={idx} className="flex items-center text-base text-gray-600">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
                     {feature}
                   </li>
                 ))}
               </ul>
-              <button className="w-full btn-secondary">
+              <button className="w-full btn-secondary text-lg">
                 Learn More
               </button>
             </div>
@@ -78,12 +78,12 @@ export default function Services() {
 
         <div className="text-center mt-12">
           <div className="bg-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Need Multiple Certifications?</h3>
-            <p className="text-gray-600 mb-6">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Need Multiple Certifications?</h3>
+            <p className="text-lg text-gray-600 mb-6">
               We offer bundled packages for businesses requiring multiple certifications. 
               Save time and money with our comprehensive certification solutions.
             </p>
-            <button className="btn-primary">
+            <button className="btn-primary text-lg">
               Get Package Deal
             </button>
           </div>

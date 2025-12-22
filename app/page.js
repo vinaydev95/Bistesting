@@ -4,6 +4,7 @@ import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Header from './components/Header';
+import FloatingContact from './components/FloatingContact';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Services />
       <WhyChooseUs />
       <Contact />
+      <FloatingContact />
     </>
   );
 }

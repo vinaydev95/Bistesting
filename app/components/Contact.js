@@ -84,8 +84,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-gray-600">Phone</p>
-                  <p className="text-gray-900 font-semibold">+91-9876543210</p>
-                  <p className="text-gray-900 font-semibold">+91-9876543211</p>
+                  <p className="text-gray-900 font-semibold">+91-9711551135</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -94,8 +93,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-gray-600">Email</p>
-                  <p className="text-gray-900 font-semibold">info@certificationexperts.com</p>
-                  <p className="text-gray-900 font-semibold">support@certificationexperts.com</p>
+                  <p className="text-gray-900 font-semibold">jsrcompliance@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -105,9 +103,9 @@ export default function Contact() {
                 <div>
                   <p className="text-gray-600">Office Address</p>
                   <p className="text-gray-900 font-semibold">
-                    Certification Experts Office<br />
-                    123 Business Plaza, Connaught Place<br />
-                    New Delhi, Delhi 110001
+                    K-11, Kh. No.-74/20, Ground Floor<br />
+                    Sharma Colony Phase-2, Budh Vihar<br />
+                    Sultanpuri, New Delhi - 110086
                   </p>
                 </div>
               </div>
@@ -130,7 +128,7 @@ export default function Contact() {
               <p className="text-blue-800">
                 Need immediate assistance? Call our emergency support line for urgent certification queries.
               </p>
-              <p className="text-blue-700 font-semibold mt-2">+91-9876543212</p>
+              <p className="text-blue-700 font-semibold mt-2">+91-9711551135</p>
             </div>
           </div>
 

@@ -26,16 +26,14 @@ export default function Footer() {
           {/* Company Info */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">
-                CQ
-              </div>
-              <div className="ml-3">
-                <span className="text-xl font-bold block">Createk QMS</span>
-                <span className="text-blue-300 text-sm block">Quality Management Solutions</span>
-              </div>
+              <img 
+                src="/logo.jpg" 
+                alt="JSR Compliance" 
+                className="h-14 w-auto bg-white rounded-lg p-1"
+              />
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
-              Professional certification consultants for BIS Registration, ISI Certification, 
+              JSR Compliance - Professional certification consultants for BIS Registration, ISI Certification, 
               EPR Compliance, BEE Star Rating, WPC Approval, and TEC Certification. 
               100% success rate with 500+ happy clients.
             </p>
@@ -84,7 +82,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Createk QMS. All rights reserved.
+            © 2024 JSR Compliance. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
