@@ -121,13 +121,13 @@ export default function ContactModal({ isOpen, onClose }) {
             <div className="p-6">
               {/* Quick Contact Info */}
               <div className="flex flex-wrap gap-4 mb-6 text-sm">
-                <a href="tel:+919876543210" className="flex items-center gap-2 text-gray-600 hover:text-blue-700">
+                <a href="tel:+91-9711551135" className="flex items-center gap-2 text-gray-600 hover:text-blue-700">
                   <Phone size={16} className="text-blue-600" />
-                  +91-9876543210
+                  +91-9711551135
                 </a>
-                <a href="mailto:info@createkqms.com" className="flex items-center gap-2 text-gray-600 hover:text-blue-700">
+                <a href="mailto:jsrcompliance@gmail.com" className="flex items-center gap-2 text-gray-600 hover:text-blue-700">
                   <Mail size={16} className="text-blue-600" />
-                  info@createkqms.com
+                jsrcompliance@gmail.com
                 </a>
               </div>
 
@@ -172,7 +172,7 @@ export default function ContactModal({ isOpen, onClose }) {
                       className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
                       required
                       disabled={isSubmitting}
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 97115 51135"
                     />
                   </div>
                 </div>

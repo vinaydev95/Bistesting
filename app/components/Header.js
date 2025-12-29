@@ -10,11 +10,11 @@ export default function Header() {
 
   const navItems = [
     { name: 'HOME', href: '/' },
-    { name: 'ABOUT US', href: '/about' },
     { name: 'OUR SERVICES', href: '/services' },
     { name: 'CLIENTS', href: '/clients' },
     { name: 'UPDATES', href: '/updates' },
     { name: 'CONTACT', href: '/contact' },
+    { name: 'ABOUT US', href: '/about' },
   ];
 
   return (
@@ -47,9 +47,9 @@ export default function Header() {
             ))}
             
             {/* Search Icon */}
-            <button className="text-gray-700 hover:text-orange-500 transition-colors">
+            {/* <button className="text-gray-700 hover:text-orange-500 transition-colors">
               <Search size={20} />
-            </button>
+            </button> */}
           </nav>
 
           {/* Mobile Menu Button */}

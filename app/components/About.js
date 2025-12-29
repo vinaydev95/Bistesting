@@ -36,9 +36,7 @@ export default function About() {
               </div>
             </div>
             
-            <button className="btn-primary">
-              Download Company Profile
-            </button>
+           
           </div>
 
           {/* Right Content */}
