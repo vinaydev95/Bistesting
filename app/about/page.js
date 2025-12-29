@@ -5,7 +5,7 @@ export default function About() {
       <section className="bg-gradient-to-r from-blue-900 to-blue-800 py-20">
         <div className="container">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About Createk QMS</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">About JSR Compliance</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
               Leading certification consultants with 10+ years of experience in helping businesses 
               achieve compliance with Indian standards and regulations.

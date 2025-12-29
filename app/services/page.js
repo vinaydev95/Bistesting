@@ -1,4 +1,35 @@
+'use client';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+const serviceImages = [
+  { src: '/bis-crs.jpg', alt: 'BIS CRS Certification' },
+  { src: '/wpc.jpg', alt: 'WPC ETA Approval' },
+  { src: '/lab.jpg', alt: 'NABL Testing' },
+  { src: '/bee.jpg', alt: 'BEE Star Label' },
+  { src: '/electronic-waste.jpg', alt: 'EPR E-Waste' },
+];
+
 export default function Services() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-rotate images every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % serviceImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % serviceImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + serviceImages.length) % serviceImages.length);
+  };
+
   const services = [
     {
       title: 'BIS Registration',
@@ -82,51 +113,120 @@ export default function Services() {
 
   return (
     <div className="pt-24">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 py-20">
+      {/* Hero Section with Image Slider */}
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-16">
         <div className="container">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Comprehensive certification and registration services to ensure your products 
-              comply with Indian standards and regulations.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-white"
+            >
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+              <p className="text-xl text-blue-100 leading-relaxed">
+                Comprehensive certification and registration services to ensure your products 
+                comply with Indian standards and regulations. We provide end-to-end support 
+                for BIS, ISI, EPR, BEE, WPC, and TEC certifications.
+              </p>
+            </motion.div>
+
+            {/* Right Content - Image Slider */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="relative bg-white rounded-2xl overflow-hidden border border-white/20 h-72">
+                {/* Image Slider */}
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentIndex}
+                    src={serviceImages[currentIndex].src}
+                    alt={serviceImages[currentIndex].alt}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full h-full object-contain p-2"
+                  />
+                </AnimatePresence>
+
+                {/* Navigation Arrows */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-blue-600/80 hover:bg-blue-600 p-2 rounded-full text-white transition-all"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-600/80 hover:bg-blue-600 p-2 rounded-full text-white transition-all"
+                >
+                  <ChevronRight size={24} />
+                </button>
+
+                {/* Caption */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <p className="text-white font-semibold text-center">{serviceImages[currentIndex].alt}</p>
+                </div>
+              </div>
+
+              {/* Navigation Dots */}
+              <div className="flex justify-center gap-2 mt-4">
+                {serviceImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      index === currentIndex ? 'bg-yellow-400 w-6' : 'bg-white/50 hover:bg-white/80'
+                    }`}
+                  />
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
-
-      {/* Services Grid */}
-      <section className="py-20 bg-white">
-        <div className="container">
+      {/* Services Grid - Same as Home Page */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Services</h2>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl">📋</span>
+            {[
+              { icon: '⚡', title: 'BEE Star Label', description: 'Energy efficiency star labeling for appliances and equipment', link: '/services/bee-star-label' },
+              { icon: '🛡️', title: 'BIS CRS Certificate', description: 'Compulsory Registration Scheme for electronics and IT goods', link: '/services/bis-crs-certification' },
+              { icon: '🏆', title: 'BIS ISI Mark (FMCS)', description: 'Foreign Manufacturers Certification Scheme for ISI marking', link: '/services/bis-isi-mark' },
+              { icon: '♻️', title: 'EPR For E-Waste', description: 'Extended Producer Responsibility for electronic waste management', link: '/services/epr-e-waste' },
+              { icon: '📻', title: 'TEC MTCTE Certification', description: 'Mandatory Testing and Certification of Telecom Equipment', link: '/services/tec-mtcte' },
+              { icon: '📶', title: 'WPC ETA Approval', description: 'Equipment Type Approval for wireless products', link: '/services/wpc-eta' },
+              { icon: '🚗', title: 'iCET ARAI Approvals', description: 'Automotive certification and homologation services', link: '/services/icet-arai' },
+              { icon: '🧪', title: 'NABL Testing Report', description: 'Accredited laboratory testing services', link: '/services/nabl-testing' },
+              { icon: '📦', title: 'EPR for Plastic Waste', description: 'Plastic packaging waste management compliance', link: '/services/epr-plastic-waste' },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group"
+              >
+                <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300 text-4xl">
+                  {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <div className="w-1 h-1 bg-blue-600 rounded-full mr-2"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex justify-between items-center text-sm text-gray-500 border-t pt-4">
-                  <span>Duration: {service.duration}</span>
-                  <span>Documents: {service.documents}</span>
-                </div>
-
-                <button className="w-full bg-blue-700 text-white py-2 rounded-lg hover:bg-blue-800 transition-colors mt-4">
-                  Get Quote
-                </button>
+                <p className="text-gray-600 mb-6 line-clamp-2">
+                  {service.description}
+                </p>
+                <a 
+                  href={service.link}
+                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                >
+                  Learn More
+                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             ))}
           </div>
