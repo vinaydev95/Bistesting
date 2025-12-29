@@ -9,9 +9,9 @@ export const metadata = {
   title: 'JSR Compliance | BIS, ISO, EPR, BEE, WPC, ISI Certification',
   description: 'Professional certification consultants for BIS Registration, ISO Certification, EPR Compliance, BEE Star Rating, WPC Approval, and ISI Mark. 100% success rate.',
   icons: {
-    icon: '/logo.jpg',
-    shortcut: '/logo.jpg',
-    apple: '/logo.jpg',
+    icon: '/JSRLOGO.png',
+    shortcut: '/JSRLOGO.png',
+    apple: '/JSRLOGO.png',
   },
 };
 

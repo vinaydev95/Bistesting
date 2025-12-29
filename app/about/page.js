@@ -21,7 +21,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Founded in 2013, Createk QMS has been at the forefront of certification and 
+                Founded in 2013, JSR Compliance has been at the forefront of certification and 
                 compliance services in India. We started with a simple mission: to make complex 
                 certification processes simple and accessible for businesses of all sizes.
               </p>

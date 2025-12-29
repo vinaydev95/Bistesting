@@ -14,7 +14,7 @@ export default function Clients() {
     {
       name: 'Rajesh Mehta',
       company: 'Tech Electronics',
-      comment: 'Createk QMS made our BIS registration process smooth and efficient. Highly recommended!',
+      comment: 'JSR Compliance made our BIS registration process smooth and efficient. Highly recommended!',
       rating: 5
     },
     {

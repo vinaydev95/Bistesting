@@ -24,7 +24,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <img 
-              src="/logo-nobg.png" 
+              src="/JSRLOGO.png" 
               alt="JSR Compliance" 
               className="h-12 w-auto"
             />

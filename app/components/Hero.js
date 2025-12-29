@@ -1,11 +1,37 @@
 'use client';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Phone } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Phone, ChevronLeft, ChevronRight } from 'lucide-react';
 import ContactModal from './ContactModal';
+
+const serviceImages = [
+  { src: '/bis-crs.jpg', alt: 'BIS CRS Certification' },
+  { src: '/wpc.jpg', alt: 'WPC ETA Approval' },
+  { src: '/lab.jpg', alt: 'NABL Testing' },
+  { src: '/bee.jpg', alt: 'BEE Star Label' },
+
+  { src: '/electronic-waste.jpg', alt: 'EPR E-Waste' },
+];
 
 export default function Hero() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-rotate images every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % serviceImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % serviceImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + serviceImages.length) % serviceImages.length);
+  };
 
   return (
     <>
@@ -42,21 +68,59 @@ export default function Hero() {
            
             </motion.div>
 
-            {/* Right Content - Placeholder for image */}
+            {/* Right Content - Image Slider */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 h-80 flex items-center justify-center border border-white/20">
-                <div className="text-center text-white">
-                  <div className="w-24 h-24 bg-yellow-400 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <div className="text-blue-900 text-2xl font-bold">BIS Consultants</div>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2">Quality Management</h3>
-                  <p className="text-blue-100">Certification Services</p>
+              <div className="relative bg-white rounded-2xl overflow-hidden border border-white/20 h-72">
+                {/* Image Slider */}
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentIndex}
+                    src={serviceImages[currentIndex].src}
+                    alt={serviceImages[currentIndex].alt}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="w-full h-full object-contain p-2"
+                  />
+                </AnimatePresence>
+
+                {/* Navigation Arrows */}
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full text-white transition-all"
+                >
+                  <ChevronLeft size={24} />
+                </button>
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 p-2 rounded-full text-white transition-all"
+                >
+                  <ChevronRight size={24} />
+                </button>
+
+                {/* Caption */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <p className="text-white font-semibold text-center">{serviceImages[currentIndex].alt}</p>
                 </div>
+              </div>
+
+              {/* Navigation Dots */}
+              <div className="flex justify-center gap-2 mt-4">
+                {serviceImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      index === currentIndex ? 'bg-yellow-400 w-6' : 'bg-white/50 hover:bg-white/80'
+                    }`}
+                  />
+                ))}
               </div>
             </motion.div>
           </div>

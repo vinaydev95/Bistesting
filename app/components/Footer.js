@@ -27,7 +27,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center mb-4">
               <img 
-                src="/logo-transparent.png" 
+                src="/JSRLOGO.png" 
                 alt="JSR Compliance" 
                 className="h-14 w-auto"
               />

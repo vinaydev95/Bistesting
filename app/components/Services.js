@@ -1,92 +1,93 @@
+import { Zap, ShieldCheck, Award, Recycle, Radio, Signal, Car, Beaker, Package } from 'lucide-react';
+import Link from 'next/link';
+
 export default function Services() {
   const services = [
     {
-      icon: '📋',
-      title: 'BIS Registration',
-      description: 'Compulsory Registration Scheme for electronics, IT goods, and other products',
-      features: ['CRS Registration', 'ISI Mark Certification', 'Foreign Manufacturer Scheme'],
-      link: '/services/bis-registration'
+      icon: <Zap className="w-12 h-12 text-blue-600" />,
+      title: 'BEE Star Label',
+      description: 'Energy efficiency star labeling for appliances and equipment',
+      link: '/services/bee-star-label'
     },
     {
-      icon: '⭐',
-      title: 'ISI Certification',
-      description: 'Indian Standards Institute mark for product quality certification',
-      features: ['Factory Inspection', 'Product Testing', 'Quality System Audit'],
-      link: '/services/isi-certification'
+      icon: <ShieldCheck className="w-12 h-12 text-blue-600" />,
+      title: 'BIS CRS Certificate',
+      description: 'Compulsory Registration Scheme for electronics and IT goods',
+      link: '/services/bis-crs-certification'
     },
     {
-      icon: '🌱',
-      title: 'EPR Certification',
-      description: 'Extended Producer Responsibility for e-waste management compliance',
-      features: ['E-Waste Management', 'Plastic Waste Management', 'Battery Waste Management'],
-      link: '/services/epr-certification'
+      icon: <Award className="w-12 h-12 text-blue-600" />,
+      title: 'BIS ISI Mark (FMCS)',
+      description: 'Foreign Manufacturers Certification Scheme for ISI marking',
+      link: '/services/bis-isi-mark'
     },
     {
-      icon: '⚡',
-      title: 'BEE Certification',
-      description: 'Bureau of Energy Efficiency star labeling for energy efficiency',
-      features: ['Star Rating', 'Energy Consumption', 'Performance Testing'],
-      link: '/services/bee-certification'
+      icon: <Recycle className="w-12 h-12 text-blue-600" />,
+      title: 'EPR For E-Waste',
+      description: 'Extended Producer Responsibility for electronic waste management',
+      link: '/services/epr-e-waste'
     },
     {
-      icon: '📡',
-      title: 'WPC Certification',
-      description: 'Wireless Planning & Coordination for wireless communication devices',
-      features: ['ETA Approval', 'License Application', 'Frequency Allocation'],
-      link: '/services/wpc-certification'
+      icon: <Radio className="w-12 h-12 text-blue-600" />,
+      title: 'TEC MTCTE Certification',
+      description: 'Mandatory Testing and Certification of Telecom Equipment',
+      link: '/services/tec-mtcte'
     },
     {
-      icon: '🏆',
-      title: 'ISO Certification',
-      description: 'International Organization for Standardization quality management',
-      features: ['ISO 9001:2015', 'ISO 14001', 'ISO 45001', 'ISO 27001'],
-      link: '/services/iso-certification'
+      icon: <Signal className="w-12 h-12 text-blue-600" />,
+      title: 'WPC ETA Approval',
+      description: 'Equipment Type Approval for wireless products',
+      link: '/services/wpc-eta'
+    },
+    {
+      icon: <Car className="w-12 h-12 text-blue-600" />,
+      title: 'iCET ARAI Approvals',
+      description: 'Automotive certification and homologation services',
+      link: '/services/icet-arai'
+    },
+    {
+      icon: <Beaker className="w-12 h-12 text-blue-600" />,
+      title: 'NABL Testing Report',
+      description: 'Accredited laboratory testing services',
+      link: '/services/nabl-testing'
+    },
+    {
+      icon: <Package className="w-12 h-12 text-blue-600" />,
+      title: 'EPR for Plastic Waste',
+      description: 'Plastic packaging waste management compliance',
+      link: '/services/epr-plastic-waste'
     },
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="container">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-4">Our Certification Services</h2>
-        <p className="text-xl text-gray-600 text-center max-w-2xl mx-auto mb-12">
-          Comprehensive certification and compliance services for Indian and international standards
-        </p>
-
+    <section id="services" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Services</h2>
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="card hover:border-blue-200 group hover:transform hover:-translate-y-2 transition-all duration-300"
+              className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group"
             >
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
-              <p className="text-lg text-gray-600 mb-4">{service.description}</p>
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-base text-gray-600">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <button className="w-full btn-secondary text-lg">
-                Learn More
-              </button>
+              <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+              <p className="text-gray-600 mb-6 line-clamp-2">
+                {service.description}
+              </p>
+              <Link 
+                href={service.link}
+                className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+              >
+                Click Here
+                <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <div className="bg-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Need Multiple Certifications?</h3>
-            <p className="text-lg text-gray-600 mb-6">
-              We offer bundled packages for businesses requiring multiple certifications. 
-              Save time and money with our comprehensive certification solutions.
-            </p>
-            <button className="btn-primary text-lg">
-              Get Package Deal
-            </button>
-          </div>
         </div>
       </div>
     </section>
