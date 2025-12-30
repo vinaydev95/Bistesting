@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const serviceImages = [
-  { src: '/bis-crs.jpg', alt: 'BIS CRS Certification' },
-  { src: '/wpc.jpg', alt: 'WPC ETA Approval' },
-  { src: '/lab.jpg', alt: 'NABL Testing' },
-  { src: '/bee.jpg', alt: 'BEE Star Label' },
-  { src: '/electronic-waste.jpg', alt: 'EPR E-Waste' },
+  { src: '/slider-bis-crs.png', alt: 'BIS CRS Certification' },
+  { src: '/slider-wpc.png', alt: 'WPC ETA Approval' },
+  { src: '/slider-nabl.png', alt: 'NABL Testing' },
+  { src: '/slider-bee.png', alt: 'BEE Star Label' },
+  { src: '/slider-ewaste.png', alt: 'EPR E-Waste' },
 ];
 
 export default function Services() {
@@ -150,7 +150,7 @@ export default function Services() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="w-full h-full object-contain p-2"
+                    className="w-full h-full object-cover"
                   />
                 </AnimatePresence>
 
@@ -197,36 +197,45 @@ export default function Services() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: '⚡', title: 'BEE Star Label', description: 'Energy efficiency star labeling for appliances and equipment', link: '/services/bee-star-label' },
-              { icon: '🛡️', title: 'BIS CRS Certificate', description: 'Compulsory Registration Scheme for electronics and IT goods', link: '/services/bis-crs-certification' },
-              { icon: '🏆', title: 'BIS ISI Mark (FMCS)', description: 'Foreign Manufacturers Certification Scheme for ISI marking', link: '/services/bis-isi-mark' },
-              { icon: '♻️', title: 'EPR For E-Waste', description: 'Extended Producer Responsibility for electronic waste management', link: '/services/epr-e-waste' },
-              { icon: '📻', title: 'TEC MTCTE Certification', description: 'Mandatory Testing and Certification of Telecom Equipment', link: '/services/tec-mtcte' },
-              { icon: '📶', title: 'WPC ETA Approval', description: 'Equipment Type Approval for wireless products', link: '/services/wpc-eta' },
-              { icon: '🚗', title: 'iCET ARAI Approvals', description: 'Automotive certification and homologation services', link: '/services/icet-arai' },
-              { icon: '🧪', title: 'NABL Testing Report', description: 'Accredited laboratory testing services', link: '/services/nabl-testing' },
-              { icon: '📦', title: 'EPR for Plastic Waste', description: 'Plastic packaging waste management compliance', link: '/services/epr-plastic-waste' },
+              { image: '/svc-bee.jpg', title: 'BEE Star Label', description: 'Energy efficiency star labeling for appliances and equipment', link: '/services/bee-star-label' },
+              { image: '/svc-bis-crs.jpg', title: 'BIS CRS Certificate', description: 'Compulsory Registration Scheme for electronics and IT goods', link: '/services/bis-crs-certification' },
+              { image: '/svc-isi.jpg', title: 'BIS ISI Mark (FMCS)', description: 'Foreign Manufacturers Certification Scheme for ISI marking', link: '/services/bis-isi-mark' },
+              { image: '/svc-ewaste.jpg', title: 'EPR For E-Waste', description: 'Extended Producer Responsibility for electronic waste management', link: '/services/epr-e-waste' },
+              { image: '/svc-tec.jpg', title: 'TEC MTCTE Certification', description: 'Mandatory Testing and Certification of Telecom Equipment', link: '/services/tec-mtcte' },
+              { image: '/svc-wpc.jpg', title: 'WPC ETA Approval', description: 'Equipment Type Approval for wireless products', link: '/services/wpc-eta' },
+              { image: '/svc-arai.jpg', title: 'iCET ARAI Approvals', description: 'Automotive certification and homologation services', link: '/services/icet-arai' },
+              { image: '/svc-nabl.jpg', title: 'NABL Testing Report', description: 'Accredited laboratory testing services', link: '/services/nabl-testing' },
+              { image: '/svc-plastic.jpg', title: 'EPR for Plastic Waste', description: 'Plastic packaging waste management compliance', link: '/services/epr-plastic-waste' },
             ].map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group"
+                className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group overflow-hidden"
               >
-                <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300 text-4xl">
-                  {service.icon}
+                {/* Service Image */}
+                <div className="h-40 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-6 line-clamp-2">
-                  {service.description}
-                </p>
-                <a 
-                  href={service.link}
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-                >
-                  Learn More
-                  <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-6 line-clamp-2">
+                    {service.description}
+                  </p>
+                  <a 
+                    href={service.link}
+                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                  >
+                    Learn More
+                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             ))}
           </div>

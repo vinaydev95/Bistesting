@@ -5,12 +5,11 @@ import { Phone, ChevronLeft, ChevronRight } from 'lucide-react';
 import ContactModal from './ContactModal';
 
 const serviceImages = [
-  { src: '/bis-crs.jpg', alt: 'BIS CRS Certification' },
-  { src: '/wpc.jpg', alt: 'WPC ETA Approval' },
-  { src: '/lab.jpg', alt: 'NABL Testing' },
-  { src: '/bee.jpg', alt: 'BEE Star Label' },
-
-  { src: '/electronic-waste.jpg', alt: 'EPR E-Waste' },
+  { src: '/slider-bis-crs.png', alt: 'BIS CRS Certification' },
+  { src: '/slider-wpc.png', alt: 'WPC ETA Approval' },
+  { src: '/slider-nabl.png', alt: 'NABL Testing' },
+  { src: '/slider-bee.png', alt: 'BEE Star Label' },
+  { src: '/slider-ewaste.png', alt: 'EPR E-Waste' },
 ];
 
 export default function Hero() {
@@ -86,7 +85,7 @@ export default function Hero() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="w-full h-full object-contain p-2"
+                    className="w-full h-full object-cover"
                   />
                 </AnimatePresence>
 

@@ -20,13 +20,13 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
       <div className="container">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <img 
               src="/JSRLOGO.png" 
               alt="JSR Compliance" 
-              className="h-12 w-auto"
+              className="h-20 w-20"
             />
           </Link>
 
@@ -36,7 +36,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors text-sm uppercase tracking-wide relative pb-1 ${
+                className={`font-semibold transition-colors text-base uppercase tracking-wide relative pb-1 ${
                   pathname === item.href
                     ? 'text-orange-500 font-bold border-b-2 border-orange-500'
                     : 'text-gray-700 hover:text-orange-500'
@@ -69,7 +69,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`font-medium py-2 uppercase text-sm ${
+                  className={`font-semibold py-2 uppercase text-base ${
                     pathname === item.href
                       ? 'text-orange-500 font-bold border-l-4 border-orange-500 pl-3'
                       : 'text-gray-700 hover:text-orange-500'
