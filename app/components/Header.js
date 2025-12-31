@@ -26,11 +26,11 @@ export default function Header() {
             <img 
               src="/JSRLOGO.png" 
               alt="JSR Compliance" 
-              className="h-16 w-16"
+              className="h-20 w-20 bg-cyan-100 border border-cyan-300 p-1 rounded-lg"
             />
             <div className="hidden sm:block">
-              <span className="text-xl font-bold text-gray-800">JSR</span>
-              <span className="text-xl font-bold text-orange-500"> Compliance</span>
+              <span className="text-2xl font-bold text-gray-800">JSR</span>
+              <span className="text-2xl font-bold text-orange-500"> Compliance</span>
             </div>
           </Link>
 
@@ -40,7 +40,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-semibold transition-all duration-200 text-base uppercase tracking-wide px-5 py-2 rounded-md ${
+                className={`font-semibold transition-all duration-200 text-lg uppercase tracking-wide px-5 py-2 rounded-md ${
                   pathname === item.href
                     ? 'bg-[#F97316] text-white'
                     : 'text-gray-700 hover:border-2 hover:border-[#F97316] hover:text-[#F97316]'
@@ -73,7 +73,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`font-semibold py-2 uppercase text-base ${
+                  className={`font-semibold py-2 uppercase text-lg ${
                     pathname === item.href
                       ? 'text-orange-500 font-bold border-l-4 border-orange-500 pl-3'
                       : 'text-gray-700 hover:text-orange-500'
