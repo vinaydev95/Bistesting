@@ -30,17 +30,17 @@ export default function Header() {
             />
             <div className="hidden sm:block">
               
-              <span className="text-3xl font-bold text-cyan-700"> JSR Compliance</span>
+              <span className="text-3xl font-bold text-cyan-700 whitespace-nowrap"> JSR Compliance</span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-4 items-center">
+          <nav className="hidden lg:flex  items-center">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-semibold transition-all duration-200 text-lg uppercase tracking-wide px-5 py-2 rounded-md ${
+                className={`font-semibold transition-all duration-200 text-base xl:text-lg uppercase tracking-wide px-3 xl:px-5 py-2 rounded-md ${
                   pathname === item.href
                     ? 'bg-[#F97316] text-white'
                     : 'text-gray-700 hover:border-2 hover:border-[#F97316] hover:text-[#F97316]'
