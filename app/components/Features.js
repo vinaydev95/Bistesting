@@ -37,8 +37,8 @@ export default function Features() {
               key={index}
               className="text-center p-6"
             >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <div className="w-8 h-8 bg-blue-600 rounded-full"></div>
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-8 h-8 bg-[#0891B2] rounded-full"></div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
                 {feature.title}

@@ -34,7 +34,7 @@ export default function Hero() {
 
   return (
     <>
-      <section id="home" className="pt-24 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+      <section id="home" className="pt-16 bg-gradient-to-br from-[#0E7490] via-[#0891B2] to-[#0E7490]">
         <div className="container">
          
           <div className="grid lg:grid-cols-2 gap-12 items-center py-16">
@@ -45,11 +45,11 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
               className="text-white"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                We Help To Grow Your <span className="text-yellow-400">Business</span>
+              <h1 className="text-4xl md:text-3xl lg:text-4xl font-bold mb-6 leading-tight">
+                India's Trusted <span className="text-[#F97316]">BIS, ISO & EPR</span> Certification Consultants
               </h1>
-              <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
-               BIS Consultants provides mandatory registration and certification services like BIS 
+              <p className="text-lg md:text-xl text-cyan-100 mb-8 leading-relaxed">
+               JSR Compliance provides mandatory registration and certification services like BIS 
                 registration, ISI certification, BEE registration, EPR authorization (for e-waste), 
                 WPC approval and TEC certification, etc. which are required for products sold in India.
               </p>
@@ -57,7 +57,7 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button 
                   onClick={() => setIsContactOpen(true)}
-                  className="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg hover:bg-yellow-400 transition-all font-semibold text-lg flex items-center justify-center hover:shadow-lg transform hover:-translate-y-0.5"
+                  className="bg-[#F97316] text-white px-8 py-4 rounded-lg hover:bg-[#EA580C] transition-all font-semibold text-lg flex items-center justify-center hover:shadow-lg transform hover:-translate-y-0.5"
                 >
                   <Phone className="mr-2" size={20} />
                   Contact Us

@@ -32,13 +32,13 @@ export default function Clients() {
   ];
 
   return (
-    <div className="pt-24">
+    <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 py-20">
+      <section className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] py-20">
         <div className="container">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Clients</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
               Trusted by 500+ businesses across India for their certification and compliance needs.
             </p>
           </div>
@@ -52,12 +52,12 @@ export default function Clients() {
           <div className="grid md:grid-cols-4 gap-6">
             {clients.map((client, index) => (
               <div key={index} className="bg-gray-50 rounded-xl p-6 text-center hover:shadow-md transition-shadow">
-                <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                <div className="w-16 h-16 bg-[#0891B2] text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
                   {client.logo}
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-1">{client.name}</h3>
                 <p className="text-sm text-gray-600 mb-2">{client.industry}</p>
-                <p className="text-xs text-blue-600 font-medium">{client.service}</p>
+                <p className="text-xs text-[#0891B2] font-medium">{client.service}</p>
               </div>
             ))}
           </div>
@@ -88,24 +88,24 @@ export default function Clients() {
       </section>
 
       {/* Statistics */}
-      <section className="py-20 bg-blue-900 text-white">
+      <section className="py-20 bg-gradient-to-r from-[#0E7490] to-[#0891B2] text-white">
         <div className="container">
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">500+</div>
-              <p className="text-blue-200">Happy Clients</p>
+              <p className="text-cyan-200">Happy Clients</p>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">100%</div>
-              <p className="text-blue-200">Success Rate</p>
+              <p className="text-cyan-200">Success Rate</p>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">10+</div>
-              <p className="text-blue-200">Years Experience</p>
+              <p className="text-cyan-200">Years Experience</p>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">15+</div>
-              <p className="text-blue-200">Certification Types</p>
+              <p className="text-cyan-200">Certification Types</p>
             </div>
           </div>
         </div>

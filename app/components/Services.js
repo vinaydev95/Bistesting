@@ -3,55 +3,55 @@ import Link from 'next/link';
 export default function Services() {
   const services = [
     {
-      image: '/svc-bee.jpg',
+      image: '/svc-bee-new.png',
       title: 'BEE Star Label',
       description: 'Energy efficiency star labeling for appliances and equipment',
       link: '/services/bee-star-label'
     },
     {
-      image: '/svc-bis-crs.jpg',
+      image: '/svc-bis-crs-new.png',
       title: 'BIS CRS Certificate',
       description: 'Compulsory Registration Scheme for electronics and IT goods',
       link: '/services/bis-crs-certification'
     },
     {
-      image: '/svc-isi.jpg',
+      image: '/svc-isi-new.png',
       title: 'BIS ISI Mark (FMCS)',
       description: 'Foreign Manufacturers Certification Scheme for ISI marking',
       link: '/services/bis-isi-mark'
     },
     {
-      image: '/svc-ewaste.jpg',
+      image: '/svc-ewaste-new.png',
       title: 'EPR For E-Waste',
       description: 'Extended Producer Responsibility for electronic waste management',
       link: '/services/epr-e-waste'
     },
     {
-      image: '/svc-tec.jpg',
+      image: '/svc-tec-new.png',
       title: 'TEC MTCTE Certification',
       description: 'Mandatory Testing and Certification of Telecom Equipment',
       link: '/services/tec-mtcte'
     },
     {
-      image: '/svc-wpc.jpg',
+      image: '/svc-wpc-new.png',
       title: 'WPC ETA Approval',
       description: 'Equipment Type Approval for wireless products',
       link: '/services/wpc-eta'
     },
     {
-      image: '/svc-arai.jpg',
+      image: '/svc-arai-new.png',
       title: 'iCET ARAI Approvals',
       description: 'Automotive certification and homologation services',
       link: '/services/icet-arai'
     },
     {
-      image: '/svc-nabl.jpg',
+      image: '/svc-nabl-new.png',
       title: 'NABL Testing Report',
       description: 'Accredited laboratory testing services',
       link: '/services/nabl-testing'
     },
     {
-      image: '/svc-plastic.jpg',
+      image: '/svc-plastic-new.png',
       title: 'EPR for Plastic Waste',
       description: 'Plastic packaging waste management compliance',
       link: '/services/epr-plastic-waste'
@@ -86,7 +86,7 @@ export default function Services() {
                 </p>
                 <Link 
                   href={service.link}
-                  className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                  className="inline-flex items-center text-[#0891B2] font-semibold hover:text-[#0E7490] transition-colors"
                 >
                   Learn More
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

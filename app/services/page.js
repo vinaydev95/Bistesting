@@ -112,9 +112,9 @@ export default function Services() {
   ];
 
   return (
-    <div className="pt-24">
+    <div className="pt-16">
       {/* Hero Section with Image Slider */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 py-16">
+      <section className="bg-gradient-to-br from-[#0E7490] via-[#0891B2] to-[#0E7490] py-16">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -125,7 +125,7 @@ export default function Services() {
               className="text-white"
             >
               <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-              <p className="text-xl text-blue-100 leading-relaxed">
+              <p className="text-xl text-cyan-100 leading-relaxed">
                 Comprehensive certification and registration services to ensure your products 
                 comply with Indian standards and regulations. We provide end-to-end support 
                 for BIS, ISI, EPR, BEE, WPC, and TEC certifications.
@@ -157,13 +157,13 @@ export default function Services() {
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevSlide}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-blue-600/80 hover:bg-blue-600 p-2 rounded-full text-white transition-all"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#0891B2]/80 hover:bg-[#0891B2] p-2 rounded-full text-white transition-all"
                 >
                   <ChevronLeft size={24} />
                 </button>
                 <button
                   onClick={nextSlide}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-blue-600/80 hover:bg-blue-600 p-2 rounded-full text-white transition-all"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 bg-[#0891B2]/80 hover:bg-[#0891B2] p-2 rounded-full text-white transition-all"
                 >
                   <ChevronRight size={24} />
                 </button>
@@ -197,15 +197,15 @@ export default function Services() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { image: '/svc-bee.jpg', title: 'BEE Star Label', description: 'Energy efficiency star labeling for appliances and equipment', link: '/services/bee-star-label' },
-              { image: '/svc-bis-crs.jpg', title: 'BIS CRS Certificate', description: 'Compulsory Registration Scheme for electronics and IT goods', link: '/services/bis-crs-certification' },
-              { image: '/svc-isi.jpg', title: 'BIS ISI Mark (FMCS)', description: 'Foreign Manufacturers Certification Scheme for ISI marking', link: '/services/bis-isi-mark' },
-              { image: '/svc-ewaste.jpg', title: 'EPR For E-Waste', description: 'Extended Producer Responsibility for electronic waste management', link: '/services/epr-e-waste' },
-              { image: '/svc-tec.jpg', title: 'TEC MTCTE Certification', description: 'Mandatory Testing and Certification of Telecom Equipment', link: '/services/tec-mtcte' },
-              { image: '/svc-wpc.jpg', title: 'WPC ETA Approval', description: 'Equipment Type Approval for wireless products', link: '/services/wpc-eta' },
-              { image: '/svc-arai.jpg', title: 'iCET ARAI Approvals', description: 'Automotive certification and homologation services', link: '/services/icet-arai' },
-              { image: '/svc-nabl.jpg', title: 'NABL Testing Report', description: 'Accredited laboratory testing services', link: '/services/nabl-testing' },
-              { image: '/svc-plastic.jpg', title: 'EPR for Plastic Waste', description: 'Plastic packaging waste management compliance', link: '/services/epr-plastic-waste' },
+              { image: '/svc-bee-new.png', title: 'BEE Star Label', description: 'Energy efficiency star labeling for appliances and equipment', link: '/services/bee-star-label' },
+              { image: '/svc-bis-crs-new.png', title: 'BIS CRS Certificate', description: 'Compulsory Registration Scheme for electronics and IT goods', link: '/services/bis-crs-certification' },
+              { image: '/svc-isi-new.png', title: 'BIS ISI Mark (FMCS)', description: 'Foreign Manufacturers Certification Scheme for ISI marking', link: '/services/bis-isi-mark' },
+              { image: '/svc-ewaste-new.png', title: 'EPR For E-Waste', description: 'Extended Producer Responsibility for electronic waste management', link: '/services/epr-e-waste' },
+              { image: '/svc-tec-new.png', title: 'TEC MTCTE Certification', description: 'Mandatory Testing and Certification of Telecom Equipment', link: '/services/tec-mtcte' },
+              { image: '/svc-wpc-new.png', title: 'WPC ETA Approval', description: 'Equipment Type Approval for wireless products', link: '/services/wpc-eta' },
+              { image: '/svc-arai-new.png', title: 'iCET ARAI Approvals', description: 'Automotive certification and homologation services', link: '/services/icet-arai' },
+              { image: '/svc-nabl-new.png', title: 'NABL Testing Report', description: 'Accredited laboratory testing services', link: '/services/nabl-testing' },
+              { image: '/svc-plastic-new.png', title: 'EPR for Plastic Waste', description: 'Plastic packaging waste management compliance', link: '/services/epr-plastic-waste' },
             ].map((service, index) => (
               <div
                 key={index}
@@ -228,7 +228,7 @@ export default function Services() {
                   </p>
                   <a 
                     href={service.link}
-                    className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                    className="inline-flex items-center text-[#0891B2] font-semibold hover:text-[#0E7490] transition-colors"
                   >
                     Learn More
                     <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -248,22 +248,22 @@ export default function Services() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Our Certification Process</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+              <div className="w-16 h-16 bg-[#0891B2] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Consultation</h3>
               <p className="text-gray-600">Free initial consultation and requirement analysis</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+              <div className="w-16 h-16 bg-[#0891B2] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Documentation</h3>
               <p className="text-gray-600">Document preparation and application filing</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+              <div className="w-16 h-16 bg-[#0891B2] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Testing</h3>
               <p className="text-gray-600">Product testing and quality evaluation</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+              <div className="w-16 h-16 bg-[#0891B2] text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Approval</h3>
               <p className="text-gray-600">Certificate issuance and delivery</p>
             </div>

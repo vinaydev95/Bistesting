@@ -11,7 +11,7 @@ export default function CertificationsSlider() {
       name: 'BIS Registration',
       description: 'Bureau of Indian Standards',
       icon: '📋',
-      color: 'from-blue-500 to-blue-700'
+      color: 'from-[#0891B2] to-[#0E7490]'
     },
     {
       name: 'ISI Certification',

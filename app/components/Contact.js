@@ -79,8 +79,8 @@ export default function Contact() {
             </h3>
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                  <Phone className="text-blue-700" size={20} />
+                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                  <Phone className="text-[#0891B2]" size={20} />
                 </div>
                 <div>
                   <p className="text-gray-600">Phone</p>
@@ -88,8 +88,8 @@ export default function Contact() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                  <Mail className="text-blue-700" size={20} />
+                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                  <Mail className="text-[#0891B2]" size={20} />
                 </div>
                 <div>
                   <p className="text-gray-600">Email</p>
@@ -97,21 +97,21 @@ export default function Contact() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                  <MapPin className="text-blue-700" size={20} />
+                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                  <MapPin className="text-[#0891B2]" size={20} />
                 </div>
                 <div>
                   <p className="text-gray-600">Office Address</p>
                   <p className="text-gray-900 font-semibold">
                     K-11, Kh. No.-74/20, Ground Floor<br />
                     Sharma Colony Phase-2, Budh Vihar<br />
-                    Sultanpuri, New Delhi - 110086
+                     New Delhi - 110086
                   </p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 mt-1">
-                  <Clock className="text-blue-700" size={20} />
+                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mr-4 mt-1">
+                  <Clock className="text-[#0891B2]" size={20} />
                 </div>
                 <div>
                   <p className="text-gray-600">Business Hours</p>
@@ -123,12 +123,12 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-              <h4 className="font-semibold text-blue-900 mb-2">Emergency Support</h4>
-              <p className="text-blue-800">
+            <div className="mt-8 p-6 bg-cyan-50 rounded-lg">
+              <h4 className="font-semibold text-[#0E7490] mb-2">Emergency Support</h4>
+              <p className="text-[#0891B2]">
                 Need immediate assistance? Call our emergency support line for urgent certification queries.
               </p>
-              <p className="text-blue-700 font-semibold mt-2">+91-9711551135</p>
+              <p className="text-[#0E7490] font-semibold mt-2">+91-9711551135</p>
             </div>
           </div>
 
@@ -156,7 +156,7 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                     required
                     disabled={isSubmitting}
                   />
@@ -171,7 +171,7 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                     required
                     disabled={isSubmitting}
                   />
@@ -189,7 +189,7 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                     required
                     disabled={isSubmitting}
                   />
@@ -204,7 +204,7 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                     disabled={isSubmitting}
                   />
                 </div>
@@ -219,7 +219,7 @@ export default function Contact() {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                   disabled={isSubmitting}
                 >
                   <option value="">Select Certification Type</option>
@@ -244,7 +244,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                   placeholder="Tell us about your certification requirements, products, and timeline..."
                   required
                   disabled={isSubmitting}
@@ -257,7 +257,7 @@ export default function Contact() {
                 className={`w-full py-3 px-6 rounded-lg transition-colors flex items-center justify-center font-semibold ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-blue-700 hover:bg-blue-800'
+                    : 'bg-[#0891B2] hover:bg-[#0E7490]'
                 } text-white`}
               >
                 {isSubmitting ? (

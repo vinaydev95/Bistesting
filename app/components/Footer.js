@@ -42,7 +42,7 @@ export default function Footer() {
                 <a
                   key={social}
                   href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
+                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#0891B2] transition-colors"
                 >
                   {social[0]}
                 </a>

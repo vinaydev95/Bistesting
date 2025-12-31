@@ -3,9 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #1e40af;
-  --secondary-color: #1e3a8a;
-  --accent-color: #fbbf24;
+  /* Brand Colors from Logo */
+  --primary-teal: #0891B2;
+  --primary-teal-dark: #0E7490;
+  --primary-teal-light: #22D3EE;
+  --accent-orange: #F97316;
+  --accent-orange-dark: #EA580C;
+  --accent-orange-light: #FB923C;
 }
 
 * {
@@ -20,7 +24,7 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -207,6 +211,31 @@ body {
   background: linear-gradient(135deg, #0ea5e9, #0284c7);
 }
 
+/* Tablet responsive - move to bottom like mobile */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .floating-contact-sidebar {
+    top: auto;
+    bottom: 20px;
+    right: 10px;
+    transform: none;
+  }
+
+  .floating-toggle-btn {
+    border-radius: 8px;
+    width: 50px;
+    min-height: 50px;
+  }
+
+  .floating-btn {
+    min-width: 50px;
+    padding: 12px;
+  }
+
+  .contact-us-btn .btn-text {
+    font-size: 12px;
+  }
+}
+
 /* Mobile responsive - smaller icons */
 @media (max-width: 768px) {
   .floating-contact-sidebar {
@@ -245,10 +274,10 @@ body {
   }
 
   .floating-btn {
-    border-radius: 10%;
-    padding: 5px;
+    border-radius: 50%;
+    padding: 10px;
     min-width: 44px;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 

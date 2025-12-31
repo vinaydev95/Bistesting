@@ -47,13 +47,13 @@ export default function Updates() {
   const categories = ['All', 'Regulatory Update', 'News', 'Update', 'Industry Insights'];
 
   return (
-    <div className="pt-24">
+    <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 py-20">
+      <section className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] py-20">
         <div className="container">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Updates & News</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
               Stay updated with the latest regulatory changes, news, and insights from the 
               certification industry.
             </p>
@@ -69,7 +69,7 @@ export default function Updates() {
             {categories.map((category, index) => (
               <button
                 key={index}
-                className="px-6 py-2 border border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
+                className="px-6 py-2 border border-[#0891B2] text-[#0891B2] rounded-full hover:bg-[#0891B2] hover:text-white transition-colors"
               >
                 {category}
               </button>
@@ -80,17 +80,17 @@ export default function Updates() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {updates.map((update, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="bg-blue-100 p-8 flex items-center justify-center">
+                <div className="bg-cyan-100 p-8 flex items-center justify-center">
                   <span className="text-4xl">{update.image}</span>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-sm text-blue-600 font-semibold">{update.category}</span>
+                    <span className="text-sm text-[#0891B2] font-semibold">{update.category}</span>
                     <span className="text-sm text-gray-500">{update.date}</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{update.title}</h3>
                   <p className="text-gray-600 mb-4">{update.excerpt}</p>
-                  <button className="text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+                  <button className="text-[#0891B2] font-semibold hover:text-[#0E7490] transition-colors">
                     Read More →
                   </button>
                 </div>
@@ -100,7 +100,7 @@ export default function Updates() {
 
           {/* Load More */}
           <div className="text-center mt-12">
-            <button className="bg-blue-700 text-white px-8 py-3 rounded-lg hover:bg-blue-800 transition-colors">
+            <button className="bg-[#0891B2] text-white px-8 py-3 rounded-lg hover:bg-[#0E7490] transition-colors">
               Load More Updates
             </button>
           </div>
@@ -120,9 +120,9 @@ export default function Updates() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
               />
-              <button className="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors">
+              <button className="bg-[#0891B2] text-white px-6 py-3 rounded-lg hover:bg-[#0E7490] transition-colors">
                 Subscribe
               </button>
             </div>

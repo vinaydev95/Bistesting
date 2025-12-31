@@ -112,21 +112,21 @@ export default function ContactModal({ isOpen, onClose }) {
             </button>
 
             {/* Header */}
-            <div className="bg-gradient-to-r from-blue-900 to-blue-700 p-6 rounded-t-2xl">
+            <div className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] p-6 rounded-t-2xl">
               <h2 className="text-2xl font-bold text-white">Contact Us</h2>
-              <p className="text-blue-100 mt-1">Get in touch with our certification experts</p>
+              <p className="text-cyan-100 mt-1">Get in touch with our certification experts</p>
             </div>
 
             {/* Content */}
             <div className="p-6">
               {/* Quick Contact Info */}
               <div className="flex flex-wrap gap-4 mb-6 text-sm">
-                <a href="tel:+91-9711551135" className="flex items-center gap-2 text-gray-600 hover:text-blue-700">
-                  <Phone size={16} className="text-blue-600" />
+                <a href="tel:+91-9711551135" className="flex items-center gap-2 text-gray-600 hover:text-[#0891B2]">
+                  <Phone size={16} className="text-[#0891B2]" />
                   +91-9711551135
                 </a>
-                <a href="mailto:jsrcompliance@gmail.com" className="flex items-center gap-2 text-gray-600 hover:text-blue-700">
-                  <Mail size={16} className="text-blue-600" />
+                <a href="mailto:jsrcompliance@gmail.com" className="flex items-center gap-2 text-gray-600 hover:text-[#0891B2]">
+                  <Mail size={16} className="text-[#0891B2]" />
                 jsrcompliance@gmail.com
                 </a>
               </div>
@@ -156,7 +156,7 @@ export default function ContactModal({ isOpen, onClose }) {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent transition-all"
                       required
                       disabled={isSubmitting}
                       placeholder="Your name"
@@ -169,7 +169,7 @@ export default function ContactModal({ isOpen, onClose }) {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent transition-all"
                       required
                       disabled={isSubmitting}
                       placeholder="+91 97115 51135"
@@ -185,7 +185,7 @@ export default function ContactModal({ isOpen, onClose }) {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent transition-all"
                       required
                       disabled={isSubmitting}
                       placeholder="your@email.com"
@@ -198,7 +198,7 @@ export default function ContactModal({ isOpen, onClose }) {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                      className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent transition-all"
                       disabled={isSubmitting}
                       placeholder="Company name (optional)"
                     />
@@ -211,7 +211,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent transition-all"
                     disabled={isSubmitting}
                   >
                     <option value="">Select a service</option>
@@ -231,7 +231,7 @@ export default function ContactModal({ isOpen, onClose }) {
                     value={formData.message}
                     onChange={handleChange}
                     rows="3"
-                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent transition-all resize-none"
                     placeholder="Tell us about your certification requirements..."
                     required
                     disabled={isSubmitting}
@@ -244,7 +244,7 @@ export default function ContactModal({ isOpen, onClose }) {
                   className={`w-full py-3 px-6 rounded-lg transition-all flex items-center justify-center font-semibold ${
                     isSubmitting
                       ? 'bg-gray-400 cursor-not-allowed'
-                      : 'bg-blue-700 hover:bg-blue-800 hover:shadow-lg transform hover:-translate-y-0.5'
+                      : 'bg-[#0891B2] hover:bg-[#0E7490] hover:shadow-lg transform hover:-translate-y-0.5'
                   } text-white`}
                 >
                   {isSubmitting ? (

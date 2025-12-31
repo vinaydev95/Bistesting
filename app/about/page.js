@@ -1,12 +1,12 @@
 export default function About() {
   return (
-    <div className="pt-24">
+    <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 py-20">
+      <section className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] py-20">
         <div className="container">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About JSR Compliance</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
               Leading certification consultants with 7+ years of experience in helping businesses 
               achieve compliance with Indian standards and regulations.
             </p>
@@ -38,11 +38,11 @@ export default function About() {
             </div>
             <div className="bg-gray-100 rounded-2xl p-8 h-96 flex items-center justify-center">
               <div className="text-center text-gray-600">
-                <div className="w-24 h-24 bg-blue-700 rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
-                  2013
+                <div className="w-24 h-24 bg-[#0891B2] rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
+                  2019
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Established</h3>
-                <p>Serving businesses for over a decade</p>
+                <p>Serving businesses for over a 7+ years</p>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function About() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mb-6">
                 <span className="text-2xl">🎯</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
@@ -90,24 +90,24 @@ export default function About() {
               <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-gray-600 text-lg">CEO</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Rahul Sharma</h3>
-              <p className="text-blue-600 font-semibold mb-2">Chief Executive Officer</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Ravinder Kumar</h3>
+              <p className="text-[#0891B2] font-semibold mb-2">Chief Executive Officer</p>
               <p className="text-gray-600">15+ years in certification industry</p>
             </div>
             <div className="text-center">
               <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-gray-600 text-lg">COO</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Priya Patel</h3>
-              <p className="text-blue-600 font-semibold mb-2">Chief Operating Officer</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Girgesh Chaudhary</h3>
+              <p className="text-[#0891B2] font-semibold mb-2">Chief Operating Officer</p>
               <p className="text-gray-600">12+ years in quality management</p>
             </div>
             <div className="text-center">
               <div className="w-32 h-32 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-gray-600 text-lg">HOD</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Amit Kumar</h3>
-              <p className="text-blue-600 font-semibold mb-2">Head of Certification</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Babita Patel</h3>
+              <p className="text-[#0891B2] font-semibold mb-2">Head of Certification</p>
               <p className="text-gray-600">Expert in BIS and regulatory affairs</p>
             </div>
           </div>

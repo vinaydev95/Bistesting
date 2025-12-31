@@ -34,8 +34,8 @@ export default async function ServicePage({ params }) {
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mt-8">
-              <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 transition hover:shadow-md">
-                 <h4 className="font-bold text-blue-900 mb-4 text-xl flex items-center gap-2">
+              <div className="bg-cyan-50 p-6 rounded-xl border border-cyan-100 transition hover:shadow-md">
+                 <h4 className="font-bold text-[#0E7490] mb-4 text-xl flex items-center gap-2">
                    Mandatory Appliances
                  </h4>
                  <ul className="space-y-2 text-gray-700 list-disc pl-5">
@@ -81,11 +81,11 @@ export default async function ServicePage({ params }) {
             <div className="prose max-w-none text-gray-700">
               <ul className="space-y-4 list-none pl-0">
                 <li className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 font-bold">1</div>
+                  <div className="w-8 h-8 rounded-full bg-cyan-100 text-[#0891B2] flex items-center justify-center shrink-0 font-bold">1</div>
                   <p>The Bureau of Indian Standards facilitates the issuance of licenses to manufacturers allowing them to utilize or apply the Standard Mark, along with a unique R-number. This process is conducted through registration based on self-declaration of conformity to Indian Standards for goods and articles.</p>
                 </li>
                 <li className="flex gap-4">
-                 <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0 font-bold">2</div>
+                 <div className="w-8 h-8 rounded-full bg-cyan-100 text-[#0891B2] flex items-center justify-center shrink-0 font-bold">2</div>
                  <p>The licensing process and its operation under the Compulsory Registration Scheme are executed in accordance with the conformity assessment scheme delineated under Scheme - II of Schedule - II of the BIS (Conformity Assessment) Regulations, 2018. This framework ensures that products adhere to the prescribed quality standards, thereby promoting consumer safety and confidence in the marketplace.</p>
                 </li>
               </ul>
@@ -102,8 +102,8 @@ export default async function ServicePage({ params }) {
             
             {/* IT & Electronics Section */}
             <div>
-              <h4 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
-                <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
+              <h4 className="text-xl font-bold text-[#0E7490] mb-4 flex items-center gap-2">
+                <span className="w-2 h-8 bg-[#0891B2] rounded-full"></span>
                 IT & Electronics
               </h4>
               <div className="bg-white border rounded-lg shadow-sm overflow-hidden">
@@ -148,7 +148,7 @@ export default async function ServicePage({ params }) {
                     ].map(row => (
                       <tr key={row.si} className="hover:bg-gray-50">
                         <td className="px-6 py-4 text-sm text-gray-500">{row.si}</td>
-                        <td className="px-6 py-4 text-sm font-medium text-blue-600">{row.is}</td>
+                        <td className="px-6 py-4 text-sm font-medium text-[#0891B2]">{row.is}</td>
                         <td className="px-6 py-4 text-sm text-gray-900">{row.title}</td>
                       </tr>
                     ))}
@@ -190,7 +190,7 @@ export default async function ServicePage({ params }) {
                     ].map(row => (
                       <tr key={row.si} className="hover:bg-gray-50">
                         <td className="px-6 py-4 text-sm text-gray-500">{row.si}</td>
-                        <td className="px-6 py-4 text-sm font-medium text-blue-600">{row.is}</td>
+                        <td className="px-6 py-4 text-sm font-medium text-[#0891B2]">{row.is}</td>
                         <td className="px-6 py-4 text-sm text-gray-900">{row.title}</td>
                       </tr>
                     ))}
@@ -225,7 +225,7 @@ export default async function ServicePage({ params }) {
                     ].map(row => (
                       <tr key={row.si} className="hover:bg-gray-50">
                         <td className="px-6 py-4 text-sm text-gray-500">{row.si}</td>
-                        <td className="px-6 py-4 text-sm font-medium text-blue-600">{row.is}</td>
+                        <td className="px-6 py-4 text-sm font-medium text-[#0891B2]">{row.is}</td>
                         <td className="px-6 py-4 text-sm text-gray-900">{row.title}</td>
                       </tr>
                     ))}
@@ -284,7 +284,7 @@ export default async function ServicePage({ params }) {
                     ].map(row => (
                       <tr key={row.si} className="hover:bg-gray-50">
                         <td className="px-6 py-4 text-sm text-gray-500">{row.si}</td>
-                        <td className="px-6 py-4 text-sm font-medium text-blue-600">{row.is}</td>
+                        <td className="px-6 py-4 text-sm font-medium text-[#0891B2]">{row.is}</td>
                         <td className="px-6 py-4 text-sm text-gray-900">{row.title}</td>
                       </tr>
                     ))}
@@ -356,8 +356,8 @@ export default async function ServicePage({ params }) {
 
           {/* Batteries Section */}
           <div>
-            <h4 className="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
-              <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
+            <h4 className="text-xl font-bold text-[#0E7490] mb-4 flex items-center gap-2">
+              <span className="w-2 h-8 bg-[#0891B2] rounded-full"></span>
               Batteries
             </h4>
             <div className="bg-white border rounded-lg shadow-sm overflow-hidden p-6">
@@ -486,7 +486,7 @@ export default async function ServicePage({ params }) {
                        <tr key={row.code} className="hover:bg-gray-50">
                          <td className="px-6 py-4 text-gray-500">{row.sl}</td>
                          <td className="px-6 py-4 text-gray-900">{row.name}</td>
-                         <td className="px-6 py-4 font-mono text-blue-600 font-medium">{row.code}</td>
+                         <td className="px-6 py-4 font-mono text-[#0891B2] font-medium">{row.code}</td>
                        </tr>
                     ))}
 
@@ -504,7 +504,7 @@ export default async function ServicePage({ params }) {
                        <tr key={row.code} className="hover:bg-gray-50">
                          <td className="px-6 py-4 text-gray-500">{row.sl}</td>
                          <td className="px-6 py-4 text-gray-900">{row.name}</td>
-                         <td className="px-6 py-4 font-mono text-blue-600 font-medium">{row.code}</td>
+                         <td className="px-6 py-4 font-mono text-[#0891B2] font-medium">{row.code}</td>
                        </tr>
                     ))}
 
@@ -551,7 +551,7 @@ export default async function ServicePage({ params }) {
                        <tr key={row.code} className="hover:bg-gray-50">
                          <td className="px-6 py-4 text-gray-500">{row.sl}</td>
                          <td className="px-6 py-4 text-gray-900">{row.name}</td>
-                         <td className="px-6 py-4 font-mono text-blue-600 font-medium">{row.code}</td>
+                         <td className="px-6 py-4 font-mono text-[#0891B2] font-medium">{row.code}</td>
                        </tr>
                     ))}
 
@@ -572,7 +572,7 @@ export default async function ServicePage({ params }) {
                        <tr key={row.code} className="hover:bg-gray-50">
                          <td className="px-6 py-4 text-gray-500">{row.sl}</td>
                          <td className="px-6 py-4 text-gray-900">{row.name}</td>
-                         <td className="px-6 py-4 font-mono text-blue-600 font-medium">{row.code}</td>
+                         <td className="px-6 py-4 font-mono text-[#0891B2] font-medium">{row.code}</td>
                        </tr>
                     ))}
 
@@ -591,7 +591,7 @@ export default async function ServicePage({ params }) {
                        <tr key={row.code} className="hover:bg-gray-50">
                          <td className="px-6 py-4 text-gray-500">{row.sl}</td>
                          <td className="px-6 py-4 text-gray-900">{row.name}</td>
-                         <td className="px-6 py-4 font-mono text-blue-600 font-medium">{row.code}</td>
+                         <td className="px-6 py-4 font-mono text-[#0891B2] font-medium">{row.code}</td>
                        </tr>
                     ))}
 
@@ -614,7 +614,7 @@ export default async function ServicePage({ params }) {
                        <tr key={row.code} className="hover:bg-gray-50">
                          <td className="px-6 py-4 text-gray-500">{row.sl}</td>
                          <td className="px-6 py-4 text-gray-900">{row.name}</td>
-                         <td className="px-6 py-4 font-mono text-blue-600 font-medium">{row.code}</td>
+                         <td className="px-6 py-4 font-mono text-[#0891B2] font-medium">{row.code}</td>
                        </tr>
                     ))}
 
@@ -632,7 +632,7 @@ export default async function ServicePage({ params }) {
                        <tr key={row.code} className="hover:bg-gray-50">
                          <td className="px-6 py-4 text-gray-500">{row.sl}</td>
                          <td className="px-6 py-4 text-gray-900">{row.name}</td>
-                         <td className="px-6 py-4 font-mono text-blue-600 font-medium">{row.code}</td>
+                         <td className="px-6 py-4 font-mono text-[#0891B2] font-medium">{row.code}</td>
                        </tr>
                     ))}
                   </tbody>
@@ -678,12 +678,12 @@ export default async function ServicePage({ params }) {
       details: (
         <div className="space-y-12">
           
-          <div className="bg-blue-50 border border-blue-200 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">Mandatory Testing and Certification of Telecommunication Equipment (MTCTE)</h3>
-            <p className="text-blue-800 leading-relaxed text-lg mb-4">
+          <div className="bg-cyan-50 border border-cyan-200 rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-[#0E7490] mb-4">Mandatory Testing and Certification of Telecommunication Equipment (MTCTE)</h3>
+            <p className="text-[#0891B2] leading-relaxed text-lg mb-4">
               Telecommunication equipment used in the Indian telecom network must undergo mandatory testing and certification as per the parameters prescribed by the Telecommunication Engineering Centre (TEC). This regime ensures that equipment does not degrade network performance, is safe for end-users, protects against radio frequency emissions, and complies with national and international standards.
             </p>
-            <p className="text-blue-800 font-semibold">
+            <p className="text-[#0891B2] font-semibold">
                Effective from 2019, certification is being rolled out in phases.
             </p>
           </div>
@@ -821,15 +821,15 @@ export default async function ServicePage({ params }) {
              <h3 className="text-xl font-bold text-gray-900 mb-4">Why MTCTE Certification?</h3>
              <ul className="space-y-3">
                <li className="flex items-start gap-3">
-                 <svg className="w-6 h-6 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                 <svg className="w-6 h-6 text-[#0891B2] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                  <span className="text-gray-700"><strong>Legal Requirement:</strong> Mandatory for selling or importing telecom equipment in India.</span>
                </li>
                <li className="flex items-start gap-3">
-                 <svg className="w-6 h-6 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                 <svg className="w-6 h-6 text-[#0891B2] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                  <span className="text-gray-700"><strong>Market Access:</strong> Essential for government tenders and large-scale deployments.</span>
                </li>
                <li className="flex items-start gap-3">
-                 <svg className="w-6 h-6 text-blue-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                 <svg className="w-6 h-6 text-[#0891B2] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                  <span className="text-gray-700"><strong>Quality Assurance:</strong> Ensures equipment meets safety and performance standards.</span>
                </li>
              </ul>
@@ -902,7 +902,7 @@ export default async function ServicePage({ params }) {
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Common Products Requiring WPC ETA</h3>
             <div className="grid md:grid-cols-3 gap-6">
                <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
-                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-2xl">📱</div>
+                 <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4 text-2xl">📱</div>
                  <h4 className="font-bold text-gray-900 mb-2">Consumer Electronics</h4>
                  <p className="text-sm text-gray-600">Mobile Phones, Tablets, Laptops, Smart Watches, Bluetooth Headphones, Speakers, E-Readers.</p>
                </div>
@@ -974,14 +974,14 @@ export default async function ServicePage({ params }) {
                    <span className="text-2xl">⚙️</span> Safety Components (AIS)
                  </h4>
                  <ul className="grid grid-cols-2 gap-3 text-gray-700">
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Tyres & Wheels</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Safety Glass</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Brake Hoses</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Seat Belts</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Lighting System</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Mirrors</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Horns</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Fuel Tanks</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Tyres & Wheels</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Safety Glass</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Brake Hoses</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Seat Belts</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Lighting System</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Mirrors</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Horns</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Fuel Tanks</li>
                  </ul>
               </div>
             </div>
@@ -1074,13 +1074,13 @@ export default async function ServicePage({ params }) {
                    <span className="text-2xl">📏</span> Calibration Laboratories
                  </h4>
                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Mechanical (Mass, Length, Force)</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Electro-Technical (Voltage, Current)</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Thermal (Temperature, Humidity)</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Optical (Luminance, Photometry)</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Fluid Flow (Pressure, Volume)</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Medical Devices</li>
-                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div>Radiological</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Mechanical (Mass, Length, Force)</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Electro-Technical (Voltage, Current)</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Thermal (Temperature, Humidity)</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Optical (Luminance, Photometry)</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Fluid Flow (Pressure, Volume)</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Medical Devices</li>
+                    <li className="flex items-center gap-2"><div className="w-2 h-2 bg-[#0891B2] rounded-full"></div>Radiological</li>
                  </ul>
               </div>
             </div>
@@ -1148,9 +1148,9 @@ export default async function ServicePage({ params }) {
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Categories of Plastic Packaging</h3>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-6 rounded-xl border border-blue-200 shadow-sm text-center">
-                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🧴</div>
-                 <h4 className="text-lg font-bold text-blue-700 mb-2">Category I</h4>
+              <div className="bg-white p-6 rounded-xl border border-cyan-200 shadow-sm text-center">
+                 <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">🧴</div>
+                 <h4 className="text-lg font-bold text-[#0891B2] mb-2">Category I</h4>
                  <p className="text-sm text-gray-600">Rigid Plastic Packaging (Bottles, Containers, Jars)</p>
               </div>
               <div className="bg-white p-6 rounded-xl border border-purple-200 shadow-sm text-center">
@@ -1220,8 +1220,8 @@ export default async function ServicePage({ params }) {
                  <p className="text-gray-600 mt-1">Upon approval, receive certificate from CPCB/SPCB valid for 5 years.</p>
                </div>
                <div className="relative">
-                 <div className="absolute -left-[41px] bg-blue-100 p-2 rounded-full border-4 border-white">
-                   <span className="text-blue-600 font-bold">4</span>
+                 <div className="absolute -left-[41px] bg-cyan-100 p-2 rounded-full border-4 border-white">
+                   <span className="text-[#0891B2] font-bold">4</span>
                  </div>
                  <h4 className="text-lg font-bold text-gray-900">Annual Compliance & Returns</h4>
                  <p className="text-gray-600 mt-1">File annual returns demonstrating fulfilment of recycling targets.</p>
@@ -1247,7 +1247,7 @@ export default async function ServicePage({ params }) {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900">Service Not Found</h1>
-          <Link href="/components/Services" className="text-blue-600 hover:underline mt-4 inline-block">
+          <Link href="/components/Services" className="text-[#0891B2] hover:underline mt-4 inline-block">
             Back to Services
           </Link>
         </div>
@@ -1349,12 +1349,12 @@ export default async function ServicePage({ params }) {
       </div>
 
         {/* Call to Action */}
-        <div className="mt-8 text-center bg-blue-900 rounded-xl p-8 shadow-lg text-white">
+        <div className="mt-8 text-center bg-gradient-to-r from-[#0E7490] to-[#0891B2] rounded-xl p-8 shadow-lg text-white">
           <h3 className="text-2xl font-bold mb-3">Need assistance with {data.title}?</h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-cyan-100 mb-6 max-w-2xl mx-auto">
             Our experts are ready to guide you through the entire certification process smoothly and efficiently.
           </p>
-          <Link href="/#contact" className="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition transform hover:-translate-y-0.5">
+          <Link href="/#contact" className="inline-block bg-white text-[#0E7490] px-8 py-3 rounded-lg font-bold hover:bg-cyan-50 transition transform hover:-translate-y-0.5">
             Contact Us Today
           </Link>
         </div>

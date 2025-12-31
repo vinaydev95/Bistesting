@@ -22,24 +22,28 @@ export default function Header() {
       <div className="container">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-2">
             <img 
               src="/JSRLOGO.png" 
               alt="JSR Compliance" 
-              className="h-20 w-20"
+              className="h-16 w-16"
             />
+            <div className="hidden sm:block">
+              <span className="text-xl font-bold text-gray-800">JSR</span>
+              <span className="text-xl font-bold text-orange-500"> Compliance</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8 items-center">
+          <nav className="hidden lg:flex space-x-4 items-center">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-semibold transition-colors text-base uppercase tracking-wide relative pb-1 ${
+                className={`font-semibold transition-all duration-200 text-base uppercase tracking-wide px-5 py-2 rounded-md ${
                   pathname === item.href
-                    ? 'text-orange-500 font-bold border-b-2 border-orange-500'
-                    : 'text-gray-700 hover:text-orange-500'
+                    ? 'bg-[#F97316] text-white'
+                    : 'text-gray-700 hover:border-2 hover:border-[#F97316] hover:text-[#F97316]'
                 }`}
               >
                 {item.name}

@@ -62,13 +62,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="pt-24">
+    <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 py-20">
+      <section className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] py-20">
         <div className="container">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl text-cyan-100 max-w-3xl mx-auto">
               Get in touch with our certification experts for free consultation and quotes.
             </p>
           </div>
@@ -89,8 +89,8 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <Phone className="text-blue-700" size={20} />
+                  <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mr-4">
+                    <Phone className="text-[#0891B2]" size={20} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
@@ -99,8 +99,8 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <Mail className="text-blue-700" size={20} />
+                  <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mr-4">
+                    <Mail className="text-[#0891B2]" size={20} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
@@ -109,22 +109,22 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <MapPin className="text-blue-700" size={20} />
+                  <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mr-4">
+                    <MapPin className="text-[#0891B2]" size={20} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>
                     <p className="text-gray-600">
                       K-11, Kh. No.-74/20, Ground Floor<br />
                       Sharma Colony Phase-2, Budh Vihar<br />
-                      Sultanpuri, New Delhi - 110086
+                      New Delhi - 110086
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                    <Clock className="text-blue-700" size={20} />
+                  <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mr-4">
+                    <Clock className="text-[#0891B2]" size={20} />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>
@@ -161,7 +161,7 @@ export default function Contact() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                       required
                       disabled={isSubmitting}
                     />
@@ -173,7 +173,7 @@ export default function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                       required
                       disabled={isSubmitting}
                     />
@@ -188,7 +188,7 @@ export default function Contact() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                       required
                       disabled={isSubmitting}
                     />
@@ -200,7 +200,7 @@ export default function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                       disabled={isSubmitting}
                     />
                   </div>
@@ -212,7 +212,7 @@ export default function Contact() {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                     disabled={isSubmitting}
                   >
                     <option value="">Select a service</option>
@@ -232,7 +232,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows="4"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0891B2] focus:border-transparent"
                     placeholder="Tell us about your certification requirements..."
                     required
                     disabled={isSubmitting}
@@ -245,7 +245,7 @@ export default function Contact() {
                   className={`w-full py-3 px-6 rounded-lg transition-colors flex items-center justify-center font-semibold ${
                     isSubmitting
                       ? 'bg-gray-400 cursor-not-allowed'
-                      : 'bg-blue-700 hover:bg-blue-800'
+                      : 'bg-[#0891B2] hover:bg-[#0E7490]'
                   } text-white`}
                 >
                   {isSubmitting ? (
