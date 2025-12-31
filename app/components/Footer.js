@@ -141,18 +141,8 @@ export default function Footer() {
                 </div>
               </div>
               
-              {/* Social Icons */}
-              <div className="flex gap-2 pt-2">
-                <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#F97316] transition-all duration-300 group">
-                  <span className="text-cyan-50 group-hover:text-white text-sm font-bold">f</span>
-                </a>
-                <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#F97316] transition-all duration-300 group">
-                  <span className="text-cyan-50 group-hover:text-white text-sm font-bold">in</span>
-                </a>
-                <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#F97316] transition-all duration-300 group">
-                  <span className="text-cyan-50 group-hover:text-white text-sm">📷</span>
-                </a>
-              </div>
+              
+              
             </div>
           </div>
         </div>
