@@ -9,7 +9,7 @@ export default function About() {
               About Our BIS Consulting Services
             </h2>
             <p className="text-lg text-gray-600 mb-6">
-              We are a team of experienced BIS consultants with over 10 years of expertise 
+              We are a team of experienced BIS consultants with over 7 years of expertise 
               in helping businesses navigate the complex landscape of Indian certification requirements.
             </p>
             <p className="text-lg text-gray-600 mb-8">

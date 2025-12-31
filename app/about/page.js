@@ -7,7 +7,7 @@ export default function About() {
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About JSR Compliance</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Leading certification consultants with 10+ years of experience in helping businesses 
+              Leading certification consultants with 7+ years of experience in helping businesses 
               achieve compliance with Indian standards and regulations.
             </p>
           </div>
@@ -21,7 +21,7 @@ export default function About() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Founded in 2013, JSR Compliance has been at the forefront of certification and 
+                Founded in 2019, JSR Compliance has been at the forefront of certification and 
                 compliance services in India. We started with a simple mission: to make complex 
                 certification processes simple and accessible for businesses of all sizes.
               </p>

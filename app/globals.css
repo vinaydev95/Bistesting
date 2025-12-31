@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -207,25 +207,32 @@ body {
   background: linear-gradient(135deg, #0ea5e9, #0284c7);
 }
 
-/* Mobile responsive */
+/* Mobile responsive - smaller icons */
 @media (max-width: 768px) {
   .floating-contact-sidebar {
     top: auto;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     transform: none;
     flex-direction: column-reverse;
   }
 
   .floating-toggle-btn {
     border-radius: 50%;
-    padding: 14px;
+    padding: 10px;
+    width: 44px;
+    min-height: 44px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .floating-toggle-btn img {
+    width: 20px;
+    height: 20px;
   }
 
   .floating-contact-options {
     flex-direction: column-reverse;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     border-radius: 12px;
   }
 
@@ -238,14 +245,20 @@ body {
   }
 
   .floating-btn {
-    border-radius: 50%;
-    padding: 14px;
-    margin-bottom: 10px;
+    border-radius: 10%;
+    padding: 5px;
+    min-width: 44px;
+    margin-bottom: 4px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 
+  .floating-btn img {
+    width: 20px;
+    height: 20px;
+  }
+
   .contact-us-btn {
-    padding: 14px;
+    padding: 10px;
   }
 
   .contact-us-btn .btn-text {
