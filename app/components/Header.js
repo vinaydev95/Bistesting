@@ -26,11 +26,11 @@ export default function Header() {
             <img 
               src="/JSRLOGO.png" 
               alt="JSR Compliance" 
-              className="h-20 w-20 bg-cyan-100 border border-cyan-300 p-1 rounded-lg"
+              className="h-20 w-20"
             />
             <div className="hidden sm:block">
-              <span className="text-2xl font-bold text-gray-800">JSR</span>
-              <span className="text-2xl font-bold text-orange-500"> Compliance</span>
+              
+              <span className="text-3xl font-bold text-cyan-700"> JSR Compliance</span>
             </div>
           </Link>
 
