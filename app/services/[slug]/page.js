@@ -22,7 +22,7 @@ export default async function ServicePage({ params }) {
     'bee-star-label': {
       title: 'BEE Star Label',
       description: 'The scheme, launched by the Hon’ble Minister of Power in May 2006, encompasses various equipment and appliances. As of now, it applies to Room Air Conditioners (Fixed Speed and Variable Speed), Ceiling Fans, Color Televisions, Computers, Direct Cool Refrigerators, Distribution Transformers, Domestic Gas Stoves, Frost-Free Refrigerators, General Purpose Industrial Motors, Monoset Pumps, Openwell Submersible Pump Sets, Stationary Storage Type Electric Water Heaters, Submersible Pump Sets, TFL (Tube lights), Washing Machines (Semi/Top Load/Front Load), Ballasts, Solid-State Inverters, Office Automation Products, Diesel Engine-Driven Monoset Pumps for Agricultural Purposes, Diesel Generator Sets, LED Lamps, Chillers, Agricultural Pump Sets, Microwave Ovens, Solar Water Heaters, Deep Freezers, Light Commercial AC (Fixed Speed and Variable Speed), Ultra-High Definition (UHD) Televisions, Air Compressors, Tires, High Energy Li-Batteries, Side-by-Side/Multi-Door Refrigerators, Pedestal Fans, Table/Wall Fans, Solar Photovoltaic products, Office Automation Products (Printers), Packaged Boilers, and Commercial Beverage Coolers.',
-      image: "/bee.jpg",
+      image: "/svc-bee-new.png",
       details: (
         <div className="space-y-8">
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
@@ -73,7 +73,7 @@ export default async function ServicePage({ params }) {
     'bis-crs-certification': {
       title: 'BIS CRS Certificate',
       description: 'According to the Orders, it is mandated that no individual or entity shall engage in the manufacture, storage for sale, import, sale, or distribution of goods that do not comply with the specified Indian standards outlined in the respective orders. Additionally, these goods must bear the Standard Mark with a unique registration number obtained from the Bureau of Indian Standards (BIS).',
-      image: "/bis-crs.jpg",
+      image: "/svc-bis-crs-new.png",
       details: (
         <div className="space-y-8">
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
@@ -307,7 +307,7 @@ export default async function ServicePage({ params }) {
     },
     'bis-isi-mark': {
       title: 'BIS ISI Mark (FMCS)',
-      image: '/bis-crs.jpg',
+      image: '/svc-isi-new.png',
       description: 'Bureau of Indian Standards (BIS), which is indeed the national standard body of India. Established under the BIS Act of 2016, its primary mandate is to oversee standardization, marking, and quality certification of goods. This encompasses ensuring the safety, reliability, and quality of products in the market.\n\nAccording to the Orders, it is mandated that no individual or entity shall engage in the manufacture, storage for sale, import, sale, or distribution of goods that do not comply with the specified Indian standards outlined in the respective orders. Additionally, these goods must bear the Standard Mark with a unique registration number obtained from the Bureau of Indian Standards (BIS).\n\nThe coveted ISI mark on a product signifies its adherence to the specific Indian Standard (IS) developed by the BIS. Obtaining the ISI mark involves a rigorous procedure, including product testing in a BIS-recognized laboratory and a thorough inspection of the manufacturing facility.',
       details: (
         <div className="space-y-12">
@@ -424,7 +424,7 @@ export default async function ServicePage({ params }) {
     },
     'epr-e-waste': {
       title: 'EPR For E-Waste',
-      image: '/electronic-waste.jpg',
+      image: '/svc-ewaste-new.png',
       description: 'The E-Waste (Management) Rules, 2022 shall apply to every Manufacturer, Producer, Recycler, Refurbisher, and Dismantler involved in the manufacture, sale, transfer, purchase, refurbishing, dismantling, recycling, and processing of e-waste or electrical and electronic equipment listed in Schedule I, including their components, consumables, parts and spares which make the product operational.',
       details: (
         <div className="space-y-12">
@@ -673,7 +673,7 @@ export default async function ServicePage({ params }) {
     },
     'tec-mtcte': {
       title: 'TEC MTCTE Certification',
-      image: '/giv.png',
+      image: '/svc-tec-new.png',
       description: 'The Department of Telecommunications, Ministry of Communications, notified the "Indian Telegraph (Amendment) Rules" in the Gazette of India via G.S.R. 1131(E) PART XI on September 5, 2017, mandating Mandatory Testing and Certification of Telecommunication Equipment.',
       details: (
         <div className="space-y-12">
@@ -846,7 +846,7 @@ export default async function ServicePage({ params }) {
     },
     'wpc-eta': {
       title: 'WPC ETA Approval',
-      image: '/wpc.jpg',
+      image: '/svc-wpc-new.png',
       description: (
         <>
           <p className="mb-4 leading-relaxed">
@@ -938,6 +938,7 @@ export default async function ServicePage({ params }) {
     'icet-arai': {
       title: 'iCET ARAI Approvals',
       description: 'The Automotive Research Association of India (ARAI) provides comprehensive certification and homologation services for the automotive industry. ARAI certification ensures that vehicles and automotive components comply with the Central Motor Vehicle Rules (CMVR) and Automotive Industry Standards (AIS), guaranteeing safety, performance, and environmental compliance.',
+      image: '/svc-arai-new.png',
       details: (
         <div className="space-y-12">
           
@@ -1032,7 +1033,7 @@ export default async function ServicePage({ params }) {
     },
     'nabl-testing': {
       title: 'NABL Accredited Test Facilities',
-      image: '/lab.jpg',
+      image: '/svc-nabl-new.png',
       description: 'The National Accreditation Board for Testing and Calibration Laboratories (NABL) is an autonomous body under the Ministry of Science and Technology, Government of India. NABL accreditation confirms that a laboratory is technically competent and capable of providing accurate and reliable testing and calibration services, adhering to the international standard ISO/IEC 17025.',
       details: (
         <div className="space-y-12">
@@ -1132,6 +1133,7 @@ export default async function ServicePage({ params }) {
     'epr-plastic-waste': {
       title: 'EPR for Plastic Waste Management',
       description: 'Extended Producer Responsibility (EPR) for plastic waste is mandated under the Plastic Waste Management Rules, 2016 (amended 2022). PIBOs (Producers, Importers, and Brand Owners) are legally required to ensure the collection and environmentally sound processing of plastic packaging waste generated from their products.',
+      image: '/svc-plastic-new.png',
       details: (
         <div className="space-y-12">
           
