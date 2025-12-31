@@ -191,7 +191,7 @@ export default function Services() {
         </div>
       </section>
       {/* Services Grid - Same as Home Page */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-8 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Our Services</h2>
           
@@ -243,7 +243,7 @@ export default function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-8 bg-gray-50">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Our Certification Process</h2>
           <div className="grid md:grid-cols-4 gap-8">

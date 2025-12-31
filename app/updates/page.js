@@ -49,7 +49,7 @@ export default function Updates() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] py-20">
+      <section className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] py-8">
         <div className="container">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Updates & News</h1>
@@ -62,7 +62,7 @@ export default function Updates() {
       </section>
 
       {/* Updates Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-8 bg-white">
         <div className="container">
           {/* Categories */}
           <div className="flex flex-wrap gap-4 mb-12 justify-center">
@@ -108,7 +108,7 @@ export default function Updates() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-8 bg-gray-50">
         <div className="container">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Stay Updated</h2>

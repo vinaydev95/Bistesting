@@ -39,7 +39,7 @@ export default function Process() {
   ];
 
   return (
-    <section id="process" className="py-20 bg-white">
+    <section id="process" className="py-8 bg-white">
       <div className="container">
         <h2 className="section-title">Our Certification Process</h2>
         <p className="section-subtitle">

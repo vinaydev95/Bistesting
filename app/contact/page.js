@@ -64,7 +64,7 @@ export default function Contact() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] py-20">
+      <section className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] py-8">
         <div className="container">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
@@ -76,7 +76,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <section className="py-8 bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -267,7 +267,7 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-8 bg-gray-50">
         <div className="container">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Location</h2>
           <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">

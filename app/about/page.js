@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] py-20">
+      <section className="bg-gradient-to-r from-[#0E7490] to-[#0891B2] py-8">
         <div className="container">
           <div className="text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About JSR Compliance</h1>
@@ -15,7 +15,7 @@ export default function About() {
       </section>
 
       {/* Company Story */}
-      <section className="py-20 bg-white">
+      <section className="py-8 bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -50,7 +50,7 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-8 bg-gray-50">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-2xl shadow-lg">
@@ -82,7 +82,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
+      <section className="py-8 bg-white">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Our Team</h2>
           <div className="grid md:grid-cols-3 gap-8">
