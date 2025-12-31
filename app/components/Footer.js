@@ -20,8 +20,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white">
-      {/* Main Footer Content */}
+    <footer className="bg-gradient-to-br from-[#0E7490] to-[#0891B2] text-white pt-4">
       <div className="container py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           
@@ -31,17 +30,17 @@ export default function Footer() {
               <img 
                 src="/JSRLOGO.png" 
                 alt="JSR Compliance" 
-                className="h-12 w-12 rounded-lg"
+                className="h-12 w-12 rounded-lg bg-white p-1"
               />
               <div>
                 <h3 className="font-bold text-lg">JSR Compliance</h3>
-                <p className="text-xs text-[#0891B2]">Certification Experts</p>
+                <p className="text-xs text-cyan-100">Certification Experts</p>
               </div>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-5">
+            <p className="text-cyan-50 text-sm leading-relaxed mb-5">
               Professional certification consultants helping businesses achieve compliance with BIS, ISI, EPR, BEE, WPC, and TEC standards.
             </p>
-            <div className="flex items-center gap-2 text-sm text-gray-400">
+            <div className="flex items-center gap-2 text-sm text-cyan-50">
               <span className="text-[#F97316] font-bold">500+</span>
               <span>Happy Clients</span>
               <span className="mx-2">•</span>
@@ -53,7 +52,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-5 flex items-center gap-2">
-              <span className="w-1 h-5 bg-[#0891B2] rounded-full"></span>
+              <span className="w-1 h-5 bg-[#F97316] rounded-full"></span>
               Our Services
             </h3>
             <ul className="space-y-3">
@@ -61,9 +60,9 @@ export default function Footer() {
                 <li key={service.name}>
                   <Link 
                     href={service.href} 
-                    className="text-gray-400 hover:text-[#0891B2] transition-colors text-sm flex items-center gap-2 group"
+                    className="text-cyan-50 hover:text-white transition-colors text-sm flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full group-hover:bg-[#0891B2] transition-colors"></span>
+                    <span className="w-1.5 h-1.5 bg-cyan-200 rounded-full group-hover:bg-[#F97316] transition-colors"></span>
                     {service.name}
                   </Link>
                 </li>
@@ -82,9 +81,9 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link 
                     href={link.href} 
-                    className="text-gray-400 hover:text-[#F97316] transition-colors text-sm flex items-center gap-2 group"
+                    className="text-cyan-50 hover:text-white transition-colors text-sm flex items-center gap-2 group"
                   >
-                    <span className="w-1.5 h-1.5 bg-gray-600 rounded-full group-hover:bg-[#F97316] transition-colors"></span>
+                    <span className="w-1.5 h-1.5 bg-cyan-200 rounded-full group-hover:bg-[#F97316] transition-colors"></span>
                     {link.name}
                   </Link>
                 </li>
@@ -95,16 +94,16 @@ export default function Footer() {
           {/* Reach Us */}
           <div>
             <h3 className="text-white font-semibold mb-5 flex items-center gap-2">
-              <span className="w-1 h-5 bg-[#0891B2] rounded-full"></span>
+              <span className="w-1 h-5 bg-[#F97316] rounded-full"></span>
               Reach Us
             </h3>
             <div className="space-y-4">
               {/* Address */}
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-sm">📍</span>
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-cyan-50 text-sm leading-relaxed">
                   K-11, Kh. No.-74/20, Ground Floor,
                   Sharma Colony Phase-2, Budh Vihar,
                   New Delhi - 110086
@@ -113,30 +112,30 @@ export default function Footer() {
               
               {/* Phone */}
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center shrink-0">
                   <span className="text-sm">📞</span>
                 </div>
-                <a href="tel:+91-9711551135" className="text-gray-400 text-sm hover:text-white transition-colors">
+                <a href="tel:+91-9711551135" className="text-cyan-50 text-sm hover:text-white transition-colors">
                   +91-9711551135
                 </a>
               </div>
               
               {/* Email */}
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center shrink-0">
                   <span className="text-sm">✉️</span>
                 </div>
-                <a href="mailto:jsrcompliance@gmail.com" className="text-gray-400 text-sm hover:text-white transition-colors">
+                <a href="mailto:jsrcompliance@gmail.com" className="text-cyan-50 text-sm hover:text-white transition-colors">
                   jsrcompliance@gmail.com
                 </a>
               </div>
               
               {/* Business Hours */}
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-sm">🕐</span>
                 </div>
-                <div className="text-gray-400 text-sm">
+                <div className="text-cyan-50 text-sm">
                   <p>Mon - Fri: 9AM - 6PM</p>
                   <p>Sat: 9AM - 2PM</p>
                 </div>
@@ -144,14 +143,14 @@ export default function Footer() {
               
               {/* Social Icons */}
               <div className="flex gap-2 pt-2">
-                <a href="#" className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#1877F2] transition-all duration-300 group">
-                  <span className="text-gray-400 group-hover:text-white text-sm font-bold">f</span>
+                <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#F97316] transition-all duration-300 group">
+                  <span className="text-cyan-50 group-hover:text-white text-sm font-bold">f</span>
                 </a>
-                <a href="#" className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-[#0A66C2] transition-all duration-300 group">
-                  <span className="text-gray-400 group-hover:text-white text-sm font-bold">in</span>
+                <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#F97316] transition-all duration-300 group">
+                  <span className="text-cyan-50 group-hover:text-white text-sm font-bold">in</span>
                 </a>
-                <a href="#" className="w-9 h-9 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] transition-all duration-300 group">
-                  <span className="text-gray-400 group-hover:text-white text-sm">📷</span>
+                <a href="#" className="w-9 h-9 bg-white/10 rounded-lg flex items-center justify-center hover:bg-[#F97316] transition-all duration-300 group">
+                  <span className="text-cyan-50 group-hover:text-white text-sm">📷</span>
                 </a>
               </div>
             </div>
@@ -160,20 +159,20 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-white/10">
         <div className="container py-5">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">
+            <p className="text-cyan-100 text-sm">
               © 2024 JSR Compliance. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
-              <Link href="/privacy" className="text-gray-500 hover:text-white text-sm transition-colors">
+              <Link href="/privacy" className="text-cyan-100 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-500 hover:text-white text-sm transition-colors">
+              <Link href="/terms" className="text-cyan-100 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/disclaimer" className="text-gray-500 hover:text-white text-sm transition-colors">
+              <Link href="/disclaimer" className="text-cyan-100 hover:text-white text-sm transition-colors">
                 Disclaimer
               </Link>
             </div>
